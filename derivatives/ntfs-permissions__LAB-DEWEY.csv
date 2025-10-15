@@ -1,0 +1,19 @@
+FolderPath,DomainLocalGroup,Permissions,AppliesTo
+E:\GoodSpotYYC,GoodSpotYYC-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC,GoodSpotYYC-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Admin,GoodSpotYYC-Admin-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Admin,GoodSpotYYC-Admin-L-RW,Modify,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Consulting,GoodSpotYYC-Consulting-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Consulting,GoodSpotYYC-Consulting-L-RW,Modify,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Demonstration Projects,GoodSpotYYC-DemonstrationProjects-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Demonstration Projects,GoodSpotYYC-DemonstrationProjects-L-RW,Modify,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Grants,GoodSpotYYC-Grants-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Grants,GoodSpotYYC-Grants-L-RW,Modify,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Learning Events,GoodSpotYYC-LearningEvents-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Learning Events,GoodSpotYYC-LearningEvents-L-RW,Modify,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Lot,GoodSpotYYC-Lot-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Lot,GoodSpotYYC-Lot-L-RW,Modify,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\PR,GoodSpotYYC-PR-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\PR,GoodSpotYYC-PR-L-RW,Modify,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Reports,GoodSpotYYC-Reports-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+E:\GoodSpotYYC\Reports,GoodSpotYYC-Reports-L-RW,Modify,ThisFolderSubfoldersFiles

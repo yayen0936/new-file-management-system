@@ -1,0 +1,46 @@
+# ================================
+# Python Cache
+# ================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ================================
+# Virtual Environments
+# ================================
+.env/
+.venv/
+env/
+venv/
+
+# ================================
+# Output Files
+# ================================
+# Ignore generated outputs, allow inputs
+! outputs/*.xlsx
+! outputs/*.xls
+! outputs/*.csv
+*.log
+
+# ================================
+# Excel / CSV Inputs
+# ================================
+# Do not ignore input files (keep them in repo)
+! inputs/*.xlsx
+! inputs/*.xls
+! inputs/*.csv
+
+# ================================
+# Editors & IDEs
+# ================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# ================================
+# OS Specific
+# ================================
+.DS_Store
+Thumbs.db
+desktop.ini

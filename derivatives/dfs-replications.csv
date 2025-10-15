@@ -1,0 +1,106 @@
+Namespace,Folder,Server,SMBShare,ReplicationLocalPath
+DFS,Action Grants,LAB-LOUIE,ActionGrants$,D:\Action Grants
+DFS,Action Grants,LAB-DEWEY,ActionGrants$,E:\Action Grants
+DFS,Action Grants,LAB-HUEY,ActionGrants$,D:\Action Grants
+DFS,ActivateYYC,LAB-LOUIE,ActivateYYC$,D:\ActivateYYC
+DFS,ActivateYYC,LAB-DEWEY,ActivateYYC$,E:\ActivateYYC
+DFS,ActivateYYC,LAB-HUEY,ActivateYYC$,D:\ActivateYYC
+DFS,Annual General Meeting,LAB-LOUIE,AnnualGeneralMeeting$,D:\Annual General Meeting
+DFS,Annual General Meeting,LAB-DEWEY,AnnualGeneralMeeting$,E:\Annual General Meeting
+DFS,Annual General Meeting,LAB-HUEY,AnnualGeneralMeeting$,D:\Annual General Meeting
+DFS,Brand Masters,LAB-LOUIE,BrandMasters$,D:\Brand Masters
+DFS,Brand Masters,LAB-DEWEY,BrandMasters$,E:\Brand Masters
+DFS,Brand Masters,LAB-HUEY,BrandMasters$,D:\Brand Masters
+DFS,Business Directory,LAB-LOUIE,BusinessDirectory$,D:\Business Directory
+DFS,Business Directory,LAB-DEWEY,BusinessDirectory$,E:\Business Directory
+DFS,Business Directory,LAB-HUEY,BusinessDirectory$,D:\Business Directory
+DFS,Citizens + Students,LAB-LOUIE,CitizensStudents$,D:\Citizens + Students
+DFS,Citizens + Students,LAB-DEWEY,CitizensStudents$,E:\Citizens + Students
+DFS,Citizens + Students,LAB-HUEY,CitizensStudents$,D:\Citizens + Students
+DFS,ClimateReadyYYC,LAB-LOUIE,ClimateReadyYYC$,D:\ClimateReadyYYC
+DFS,ClimateReadyYYC,LAB-DEWEY,ClimateReadyYYC$,E:\ClimateReadyYYC
+DFS,ClimateReadyYYC,LAB-HUEY,ClimateReadyYYC$,D:\ClimateReadyYYC
+DFS,Communications,LAB-LOUIE,Communications$,D:\Communications
+DFS,Communications,LAB-DEWEY,Communications$,E:\Communications
+DFS,Communications,LAB-HUEY,Communications$,D:\Communications
+DFS,Consulting,LAB-LOUIE,Consulting$,D:\Consulting
+DFS,Consulting,LAB-DEWEY,Consulting$,E:\Consulting
+DFS,Consulting,LAB-HUEY,Consulting$,D:\Consulting
+DFS,Energizing Spaces,LAB-LOUIE,EnergizingSpaces$,D:\Energizing Spaces
+DFS,Energizing Spaces,LAB-DEWEY,EnergizingSpaces$,E:\Energizing Spaces
+DFS,Energizing Spaces,LAB-HUEY,EnergizingSpaces$,D:\Energizing Spaces
+DFS,Exploring Communities,LAB-LOUIE,ExploringCommunities$,D:\Exploring Communities
+DFS,Exploring Communities,LAB-DEWEY,ExploringCommunities$,E:\Exploring Communities
+DFS,Exploring Communities,LAB-HUEY,ExploringCommunities$,D:\Exploring Communities
+DFS,External Committees,LAB-LOUIE,ExternalCommittees$,D:\External Committees
+DFS,External Committees,LAB-DEWEY,ExternalCommittees$,E:\External Committees
+DFS,External Committees,LAB-HUEY,ExternalCommittees$,D:\External Committees
+DFS,Financial Literacy,LAB-LOUIE,FinancialLiteracy$,D:\Financial Literacy
+DFS,Financial Literacy,LAB-DEWEY,FinancialLiteracy$,E:\Financial Literacy
+DFS,Financial Literacy,LAB-HUEY,FinancialLiteracy$,D:\Financial Literacy
+DFS,Forum,LAB-LOUIE,Forum$,D:\Forum
+DFS,Forum,LAB-DEWEY,Forum$,E:\Forum
+DFS,Forum,LAB-HUEY,Forum$,D:\Forum
+DFS,Fund Development,LAB-LOUIE,FundDevelopment$,D:\Fund Development
+DFS,Fund Development,LAB-DEWEY,FundDevelopment$,E:\Fund Development
+DFS,Fund Development,LAB-HUEY,FundDevelopment$,D:\Fund Development
+DFS,GoodSpotYYC,LAB-LOUIE,GoodSpotYYC$,D:\GoodSpotYYC
+DFS,GoodSpotYYC,LAB-DEWEY,GoodSpotYYC$,E:\GoodSpotYYC
+DFS,GoodSpotYYC,LAB-HUEY,GoodSpotYYC$,D:\GoodSpotYYC
+DFS,Hero Awards,LAB-LOUIE,HeroAwards$,D:\Hero Awards
+DFS,Hero Awards,LAB-DEWEY,HeroAwards$,E:\Hero Awards
+DFS,Hero Awards,LAB-HUEY,HeroAwards$,D:\Hero Awards
+DFS,IT,LAB-LOUIE,IT$,D:\IT
+DFS,IT,LAB-DEWEY,IT$,E:\IT
+DFS,IT,LAB-HUEY,IT$,D:\IT
+DFS,Internal Committees,LAB-LOUIE,InternalCommittees$,D:\Internal Committees
+DFS,Internal Committees,LAB-DEWEY,InternalCommittees$,E:\Internal Committees
+DFS,Internal Committees,LAB-HUEY,InternalCommittees$,D:\Internal Committees
+DFS,Jane's Walk,LAB-LOUIE,JanesWalk$,D:\Jane's Walk
+DFS,Jane's Walk,LAB-DEWEY,JanesWalk$,E:\Jane's Walk
+DFS,Jane's Walk,LAB-HUEY,JanesWalk$,D:\Jane's Walk
+DFS,Lunch n Learns,LAB-LOUIE,LunchnLearns$,D:\Lunch n Learns
+DFS,Lunch n Learns,LAB-DEWEY,LunchnLearns$,E:\Lunch n Learns
+DFS,Lunch n Learns,LAB-HUEY,LunchnLearns$,D:\Lunch n Learns
+DFS,March CA Awareness,LAB-LOUIE,MarchCAAwareness$,D:\March CA Awareness
+DFS,March CA Awareness,LAB-DEWEY,MarchCAAwareness$,E:\March CA Awareness
+DFS,March CA Awareness,LAB-HUEY,MarchCAAwareness$,D:\March CA Awareness
+DFS,Member Engagement,LAB-LOUIE,MemberEngagement$,D:\Member Engagement
+DFS,Member Engagement,LAB-DEWEY,MemberEngagement$,E:\Member Engagement
+DFS,Member Engagement,LAB-HUEY,MemberEngagement$,D:\Member Engagement
+DFS,Member Resource Library,LAB-LOUIE,MemberResourceLibrary$,D:\Member Resource Library
+DFS,Member Resource Library,LAB-DEWEY,MemberResourceLibrary$,E:\Member Resource Library
+DFS,Member Resource Library,LAB-HUEY,MemberResourceLibrary$,D:\Member Resource Library
+DFS,Membership,LAB-LOUIE,Membership$,D:\Membership
+DFS,Membership,LAB-DEWEY,Membership$,E:\Membership
+DFS,Membership,LAB-HUEY,Membership$,D:\Membership
+DFS,Milestones,LAB-LOUIE,Milestones$,D:\Milestones
+DFS,Milestones,LAB-DEWEY,Milestones$,E:\Milestones
+DFS,Milestones,LAB-HUEY,Milestones$,D:\Milestones
+DFS,Neighbour Day,LAB-LOUIE,NeighbourDay$,D:\Neighbour Day
+DFS,Neighbour Day,LAB-DEWEY,NeighbourDay$,E:\Neighbour Day
+DFS,Neighbour Day,LAB-HUEY,NeighbourDay$,D:\Neighbour Day
+DFS,Newsletter,LAB-LOUIE,Newsletter$,D:\Newsletter
+DFS,Newsletter,LAB-DEWEY,Newsletter$,E:\Newsletter
+DFS,Newsletter,LAB-HUEY,Newsletter$,D:\Newsletter
+DFS,One-on-One Support,LAB-LOUIE,OneonOneSupport$,D:\One-on-One Support
+DFS,One-on-One Support,LAB-DEWEY,OneonOneSupport$,E:\One-on-One Support
+DFS,One-on-One Support,LAB-HUEY,OneonOneSupport$,D:\One-on-One Support
+DFS,Partners In Planning,LAB-LOUIE,PartnersInPlanning$,D:\Partners In Planning
+DFS,Partners In Planning,LAB-DEWEY,PartnersInPlanning$,E:\Partners In Planning
+DFS,Partners In Planning,LAB-HUEY,PartnersInPlanning$,D:\Partners In Planning
+DFS,Social Media,LAB-LOUIE,SocialMedia$,D:\Social Media
+DFS,Social Media,LAB-DEWEY,SocialMedia$,E:\Social Media
+DFS,Social Media,LAB-HUEY,SocialMedia$,D:\Social Media
+DFS,Sponsors,LAB-LOUIE,Sponsors$,D:\Sponsors
+DFS,Sponsors,LAB-DEWEY,Sponsors$,E:\Sponsors
+DFS,Sponsors,LAB-HUEY,Sponsors$,D:\Sponsors
+DFS,Urban Planning Topics,LAB-LOUIE,UrbanPlanningTopics$,D:\Urban Planning Topics
+DFS,Urban Planning Topics,LAB-DEWEY,UrbanPlanningTopics$,E:\Urban Planning Topics
+DFS,Urban Planning Topics,LAB-HUEY,UrbanPlanningTopics$,D:\Urban Planning Topics
+DFS,Website,LAB-LOUIE,Website$,D:\Website
+DFS,Website,LAB-DEWEY,Website$,E:\Website
+DFS,Website,LAB-HUEY,Website$,D:\Website
+DFS,Workshops,LAB-LOUIE,Workshops$,D:\Workshops
+DFS,Workshops,LAB-DEWEY,Workshops$,E:\Workshops
+DFS,Workshops,LAB-HUEY,Workshops$,D:\Workshops

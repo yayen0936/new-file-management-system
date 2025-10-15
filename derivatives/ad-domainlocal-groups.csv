@@ -1,0 +1,19 @@
+GroupName,Description,NestedOUs,Members
+GoodSpotYYC-Root-L-RO,Read-only access for GoodSpotYYC Root Folder,Resources,Executive Director; Bookkeeper; Office Coordinator; Organizational Capacity; Director of Education; Engagement and Support Coordinator; Communications Generalist; Data and Program Assistant; Urban Planner; Manager Placemaking; Community Grant Implementer
+GoodSpotYYC-Root-L-RW,Read/Write access for GoodSpotYYC Root Folder,Resources,
+GoodSpotYYC-Admin-L-RO,Read-only access for GoodSpotYYC Admin SubFolder,Resources,Office Coordinator
+GoodSpotYYC-Admin-L-RW,Read/Write access for GoodSpotYYC Admin SubFolder,Resources,Executive Director; Bookkeeper; Organizational Capacity; Communications Generalist; Data and Program Assistant; Manager Placemaking; Community Grant Implementer
+GoodSpotYYC-Consulting-L-RO,Read-only access for GoodSpotYYC Consulting SubFolder,Resources,
+GoodSpotYYC-Consulting-L-RW,Read/Write access for GoodSpotYYC Consulting SubFolder,Resources,Executive Director; Bookkeeper; Office Coordinator; Organizational Capacity; Director of Education; Engagement and Support Coordinator; Communications Generalist; Data and Program Assistant; Urban Planner; Manager Placemaking; Community Grant Implementer
+GoodSpotYYC-DemonstrationProjects-L-RO,Read-only access for GoodSpotYYC Demonstration Projects SubFolder,Resources,
+GoodSpotYYC-DemonstrationProjects-L-RW,Read/Write access for GoodSpotYYC Demonstration Projects SubFolder,Resources,Executive Director; Bookkeeper; Office Coordinator; Organizational Capacity; Director of Education; Engagement and Support Coordinator; Communications Generalist; Data and Program Assistant; Urban Planner; Manager Placemaking; Community Grant Implementer
+GoodSpotYYC-Grants-L-RO,Read-only access for GoodSpotYYC Grants SubFolder,Resources,
+GoodSpotYYC-Grants-L-RW,Read/Write access for GoodSpotYYC Grants SubFolder,Resources,Executive Director; Bookkeeper; Office Coordinator; Organizational Capacity; Director of Education; Engagement and Support Coordinator; Communications Generalist; Data and Program Assistant; Urban Planner; Manager Placemaking; Community Grant Implementer
+GoodSpotYYC-LearningEvents-L-RO,Read-only access for GoodSpotYYC Learning Events SubFolder,Resources,
+GoodSpotYYC-LearningEvents-L-RW,Read/Write access for GoodSpotYYC Learning Events SubFolder,Resources,Executive Director; Office Coordinator; Organizational Capacity; Director of Education; Engagement and Support Coordinator; Communications Generalist; Data and Program Assistant; Urban Planner; Manager Placemaking; Community Grant Implementer
+GoodSpotYYC-Lot-L-RO,Read-only access for GoodSpotYYC Lot SubFolder,Resources,
+GoodSpotYYC-Lot-L-RW,Read/Write access for GoodSpotYYC Lot SubFolder,Resources,Executive Director; Bookkeeper; Organizational Capacity; Communications Generalist; Data and Program Assistant; Manager Placemaking; Community Grant Implementer
+GoodSpotYYC-PR-L-RO,Read-only access for GoodSpotYYC PR SubFolder,Resources,Organizational Capacity
+GoodSpotYYC-PR-L-RW,Read/Write access for GoodSpotYYC PR SubFolder,Resources,Executive Director; Communications Generalist; Data and Program Assistant; Manager Placemaking; Community Grant Implementer
+GoodSpotYYC-Reports-L-RO,Read-only access for GoodSpotYYC Reports SubFolder,Resources,Organizational Capacity
+GoodSpotYYC-Reports-L-RW,Read/Write access for GoodSpotYYC Reports SubFolder,Resources,Executive Director; Bookkeeper; Office Coordinator; Communications Generalist; Data and Program Assistant; Manager Placemaking; Community Grant Implementer

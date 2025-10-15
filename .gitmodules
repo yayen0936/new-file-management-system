@@ -1,0 +1,16 @@
+[submodule "submodules/ad-security-groups"]
+	path = submodules/ad-security-groups
+	url = ssh://git@gitea.ad.calgarycommunities.com:7002/ccrodua/ad-security-groups.git
+	branch = main
+[submodule "submodules/dfs-namespace-replication"]
+	path = submodules/dfs-namespace-replication
+	url = ssh://git@gitea.ad.calgarycommunities.com:7002/ccrodua/dfs-namespace-replication.git
+	branch = main
+[submodule "submodules/ntfs-smb-permissions"]
+	path = submodules/ntfs-smb-permissions
+	url = ssh://git@gitea.ad.calgarycommunities.com:7002/ccrodua/ntfs-smb-permissions.git
+	branch = main
+[submodule "submodules/fileorg-powershell-inputs"]
+	path = submodules/fileorg-powershell-inputs
+	url = ssh://git@gitea.ad.calgarycommunities.com:7002/ccrodua/fileorg-powershell-inputs.git
+	branch = main
