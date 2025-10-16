@@ -1,0 +1,12 @@
+[submodule "submodules/fileorg-permissions-generator"]
+	path = submodules/fileorg-permissions-generator
+	url = https://github.com/yayen0936/fileorg-permissions-generator
+[submodule "submodules/ad-security-groups"]
+	path = submodules/ad-security-groups
+	url = https://github.com/yayen0936/ad-security-groups
+[submodule "submodules/ntfs-smb-permissions"]
+	path = submodules/ntfs-smb-permissions
+	url = https://github.com/yayen0936/ntfs-smb-permissions
+[submodule "submodules/dfs-namespace-replication"]
+	path = submodules/dfs-namespace-replication
+	url = https://github.com/yayen0936/dfs-namespace-replication
