@@ -1,13 +1,3 @@
-<#
-.SYNOPSIS
-Wrapper to execute Set-SMB-Permissions.ps1 remotely on all file servers.
-
-.DESCRIPTION
-Reads configuration from servers.json and calls the SMB permissions script
-per server with proper arguments, logs, and error handling.
-
-#>
-
 [CmdletBinding()]
 param(
     [string]$ServersJson = ".\inputs\servers.json",
