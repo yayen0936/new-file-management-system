@@ -24,7 +24,7 @@ try {
 if (-not (Test-Path $ServersJson)) { throw "servers.json not found: $ServersJson" }
 if (-not (Test-Path $SMBScript))   { throw "SMB script not found: $SMBScript" }
 
-# --- Load configuration ------------------------------------------------------
+# --- Load server configuration ----------------------------------------------
 $serversConfig = Get-Content $ServersJson -Raw | ConvertFrom-Json
 $fileServers   = $serversConfig.file_servers.PSObject.Properties.Name
 
@@ -88,5 +88,4 @@ foreach ($Server in $fileServers) {
         if ($Session) { Remove-PSSession $Session }
     }
 }
-
 Write-Host "`nAll servers processed." -ForegroundColor Yellow
