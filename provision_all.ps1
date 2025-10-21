@@ -32,8 +32,8 @@
 
 .NOTES
     Author: Clarence Crodua
-    Date: 2025-10-06
-    Version: 2.8
+    Date: 2025-10-15
+    Version: 2.9
 
     Variable Naming:
     - Using PascalCase consistently for all script parameters: (e.g. $Servers, $Permissions, $DerivativeDir)
@@ -98,7 +98,7 @@ function Test-Preflight {
     param(
         [Parameter(Mandatory=$true)][string]$Servers,
         [Parameter(Mandatory=$true)][string]$Permissions
-    )
+    )   
     Write-Section "Pre-flight Validation"
     
     # 1) Check admin privileges
@@ -308,19 +308,81 @@ function Provision-Orchestrator {
     Write-Section "Pipeline execution completed successfully"
     Write-Host ("Completed at: {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"))
 }
+
 # -----------------------------
-# MAIN EXECUTION
+# Function: Show-Menu
+# -----------------------------
+function Show-Menu {
+    Clear-Host
+    Write-Host ""
+    Write-Host "==================== FEDYYC Provisioning Menu ====================" -ForegroundColor Yellow
+    Write-Host "1. Generate CSV Files"
+    Write-Host "2. Create AD Domain Local Groups"
+    Write-Host "3. Apply NTFS Permissions"
+    Write-Host "4. Apply SMB Share Permissions"
+    Write-Host "5. Configure DFS Namespace & Replication"
+    Write-Host "6. Run Full Orchestration (One-Click)"
+    Write-Host "7. Exit"
+    Write-Host "==================================================================" -ForegroundColor Yellow
+}
+
+# -----------------------------
+# MAIN MENU LOOP
 # -----------------------------
 try {
-    Provision-Orchestrator `
-        -Servers $Servers `
-        -Permissions $Permissions `
-        -DerivativeDir $DerivativeDir `
-        -DLGroupsCsv $DLGroupsCsv `
-        -NtfsCsv $NtfsCsv `
-        -SmbCsv $SmbCsv `
-        -DfsNamespaceCsv $DfsNamespaceCsv `
-        -DfsReplicationCsv $DfsReplicationCsv   
+    do {
+        Show-Menu
+        $choice = Read-Host "Select an option [1-7]"
+
+        switch ($choice) {
+            '1' {
+                Test-Preflight -Servers $Servers -Permissions $Permissions
+                Generate-CSV   -Servers $Servers -Permissions $Permissions -DerivativeDir $DerivativeDir
+                Pause
+            }
+            '2' {
+                Provision-Step -StepName "Create-AD-DomainLocal-Groups" `
+                    -ScriptPath ".\submodules\ad-security-groups\Create-AD-DomainLocal-Groups.ps1" `
+                    -Args @("-CsvPath", "`"$DLGroupsCsv`"")
+                Pause
+            }
+            '3' {
+                Write-Section "Running NTFS Permissions Step"
+                .\run-NTFS.ps1 -Verbose
+                Pause
+            }
+            '4' {
+                Write-Section "Running SMB Permissions Step"
+                .\run-SMB.ps1 -Verbose
+                Pause
+            }
+            '5' {
+                Write-Section "Running DFS Namespace + Replication Step"
+                .\run-DFS.ps1 -Verbose
+                Pause
+            }
+            '6' {
+                Provision-Orchestrator `
+                    -Servers $Servers `
+                    -Permissions $Permissions `
+                    -DerivativeDir $DerivativeDir `
+                    -DLGroupsCsv $DLGroupsCsv `
+                    -NtfsCsv $NtfsCsv `
+                    -SmbCsv $SmbCsv `
+                    -DfsNamespaceCsv $DfsNamespaceCsv `
+                    -DfsReplicationCsv $DfsReplicationCsv
+                Pause
+            }
+            '7' {
+                Write-Host "Exiting Orchestrator..." -ForegroundColor Yellow
+                break
+            }
+            default {
+                Write-Host "Invalid option. Please try again." -ForegroundColor Red
+                Pause
+            }
+        }
+    } while ($choice -ne '7')
 }
 catch {
     Write-Section "Pipeline failed"
