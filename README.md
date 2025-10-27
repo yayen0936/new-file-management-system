@@ -14,58 +14,77 @@ It follows Microsoft best practices for PowerShell (Verb-Noun naming), and organ
 ```
 new-file-management-system/
 │
-├─ inputs/                   # CSV inputs & pipeline config
+├─ derivatives/                     # CSV inputs
 │  ├─ ad-domainlocal-groups.csv
 │  ├─ ntfs-permissions.csv
 │  ├─ smb-share-permissions.csv
 │  ├─ dfs-namespaces.csv
 │  ├─ dfs-replications.csv
-│  └─ pipeline.config.json   # Orchestrator step definitions
 │
-├─ submodules/                    # Submodules (child repos)
+├─ inputs/                          # pipeline config
+│  └─ pipeline.config.json          # Orchestrator step definitions
+│
+├─ logs/
+│
+├─ submodules/                      # child repos
 │  ├─ ad-security-groups/
 │  ├─ ntfs-smb-permissions/
-│  └─ dfs-namespace-replication/
+│  ├─ dfs-namespace-replication/
 │  └─ fileorg-powershell-inputs/
 │
-├─ Run-All.ps1               # Orchestrator to execute full pipeline
+├─ provision_all.ps1                # orchestrator to execute full pipeline
+├─ run-DomainLocal.ps1              # orchestrator to create domain local groups
+├─ run-NTFS.ps1                     # orchestrator to apply NTFS permissions
+├─ run-SMB.ps1                      # orchestrator to apply SMB share & permissions
+├─ run-DFS.ps1                      # orchestrator to apply DFS namespace & replication
 |
-├─ .gitmodules               # Submodule references
+├─ .gitmodules                      # submodule references
 ├─ .gitignore
 │
 └─ README.md
 ```
 ---
 
-## 💻 Usage Instructions
+## 💻 How to run
 
-**Run-All.ps1 uses inputs\pipeline.config.json to know which scripts to run and which CSVs to pass.**
-
-a) **Prepare the required input CSV files under the `inputs/` folder:**
-
-1. **Create AD Domain Local Groups**  
-   - `inputs/ad-domainlocal-groups.csv` → Defines AD **Domain Local Security Groups** to be created.  
-
-2. **Set NTFS Permissions**  
-   - `inputs/ntfs-permissions.csv` → Defines NTFS folder and file permissions to be applied.  
-
-3. **Set SMB Share Permissions**  
-   - `inputs/smb-share-permissions.csv` → Defines SMB share-level permissions to be applied.  
-
-4. **Create DFS Namespace and Replication**  
-   - `inputs/dfs-namespaces.csv` → Defines DFS namespaces to be created.  
-   - `inputs/dfs-replications.csv` → Defines DFS replication groups and replicated folders.  
-
-
-b) **Run via Orchestrator**  
-
-> First, change directory to the repository root so that script and input paths resolve correctly:
-
+Step 1: **Navigate to the repository root directory**
 ```powershell
-PS> cd C:\Users\<replace>\Documents\new-file-management-system
+cd C:\Users\<replace>\Documents\new-file-management-system
 ```
 
+Step 2: **Generate input CSV files**
 ```powershell
-PS> .\Run-All.ps1 -Verbose
+python .\submodules\fileorg-permissions-generator\generate_csv.py `
+  --input ".\inputs\file-org-folder-permissions.xlsx" `
+  --config ".\inputs\servers.json" `
+  --outdir ".\derivatives" `
+  --verbose
 ```
-Logs are written to .\logs\pipeline-<timestamp>.log
+
+Step 3: **Create Domain Local Groups**
+```powershell
+.\run-DomainLocal.ps1 -Verbose
+```
+
+Step 4: **Create Folder and Apply NTFS permissions**
+```powershell
+.\run-NTFS.ps1 -Verbose
+```
+
+Step 5: **Share Folder and Apply SMB permissions**
+```powershell
+.\run-SMB.ps1 -Verbose
+```
+
+Step 6: **Create DFS namespace and replication**
+```powershell
+.\run-DFS.ps1 -Verbose
+```
+
+Step 7: **Run orchestrator**
+```powershell
+.\provision_all.ps1 `
+ -Servers ".\inputs\servers.json" `
+ -Permissions ".\inputs\file-org-folder-permissions.xlsx" `
+ -Verbose
+```
