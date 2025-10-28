@@ -82,6 +82,5 @@ try {
     } finally {
         if ($Session) { Remove-PSSession $Session }
     }
-}
 
 Write-Host "`nAll DFS root servers processed." -ForegroundColor Yellow
