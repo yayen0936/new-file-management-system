@@ -1,92 +1,84 @@
 [CmdletBinding()]
 param(
     [string]$ServersJson = ".\inputs\servers.json",
-    [string]$DFSscript   = ".\submodules\dfs-namespace-replication\Create-DFS-Namespace-Replication.ps1",
+    [string]$DFSScript   = ".\submodules\dfs-namespace-replication\Create-DFS-Namespace-Replication.ps1",
     [string]$Derivatives = ".\derivatives",
     [string]$TempPath    = "C:\Temp"
 )
 
-# --- Ensure user can run scripts ---------------------------------------------
+# --- Validate paths ----------------------------------------------------------
+if (-not (Test-Path $ServersJson)) { throw "servers.json not found: $ServersJson" }
+if (-not (Test-Path $DFSScript))  { throw "DFS script not found: $DFSScript" }
+
+# --- Load configuration and detect primary file server -----------------------
 try {
-    $currentPolicy = Get-ExecutionPolicy -Scope CurrentUser
-    if ($currentPolicy -ne 'RemoteSigned') {
-        Write-Host "Current user execution policy is '$currentPolicy'. Updating to 'RemoteSigned'..." -ForegroundColor Yellow
-        Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
-        Write-Host "Execution policy updated to 'RemoteSigned' for user $env:USERNAME." -ForegroundColor Green
-    } else {
-        Write-Host "Execution policy already set to 'RemoteSigned' for current user." -ForegroundColor Green
-    }
+    $serversConfig = Get-Content $ServersJson -Raw | ConvertFrom-Json
+
+    # Pick the first file server as primary (e.g., LAB-LOUIE)
+    $FileServers = $serversConfig.file_servers.PSObject.Properties.Name
+    if (-not $FileServers) { throw "No file_servers found in $ServersJson" }
+    $PrimaryFileServer = $FileServers | Select-Object -First 1
+
+    if (-not $PrimaryFileServer) { throw "Primary file server not detected in $ServersJson" }
 } catch {
-    Write-Warning "Unable to set execution policy automatically. Run PowerShell as administrator if required."
+    throw "Failed to parse servers.json: $($_.Exception.Message)"
 }
 
-# --- Validate dependencies ---------------------------------------------------
-if (-not (Test-Path $ServersJson)) { throw "servers.json not found: $ServersJson" }
-if (-not (Test-Path $DFSscript))   { throw "DFS script not found: $DFSscript" }
-
-# --- Load server configuration ----------------------------------------------
-$serversConfig = Get-Content $ServersJson -Raw | ConvertFrom-Json
-$dfsRootServers = $serversConfig.dfs_root_servers
-if (-not $dfsRootServers) { throw "No DFS root servers defined in servers.json." }
+Write-Host "`nPrimary File Server detected: $PrimaryFileServer" -ForegroundColor Cyan
 
 # --- Prepare logging directory ----------------------------------------------
 $logsDir = Join-Path $PSScriptRoot "logs"
 if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Force -Path $logsDir | Out-Null }
 
-# --- Prompt for credential once ---------------------------------------------
+# --- Prompt for credentials --------------------------------------------------
 $Cred = Get-Credential -Message "Enter domain admin credentials (e.g., ITSADLAB\yayen)"
 
-# --- Locate CSVs -------------------------------------------------------------
-$NamespacesCsv   = Join-Path $Derivatives "dfs-namespaces.csv"
-$ReplicationCsv  = Join-Path $Derivatives "dfs-replications.csv"
+# --- Locate DFS CSV manifests -----------------------------------------------
+$CsvNamespace = Join-Path $Derivatives "dfs-namespaces.csv"
+$CsvFolders   = Join-Path $Derivatives "dfs-replications.csv"
 
-if (-not (Test-Path $NamespacesCsv))  { throw "Missing CSV: $NamespacesCsv" }
-if (-not (Test-Path $ReplicationCsv)) { throw "Missing CSV: $ReplicationCsv" }
+if (-not (Test-Path $CsvNamespace)) { throw "DFS Namespace CSV not found: $CsvNamespace" }
+if (-not (Test-Path $CsvFolders))   { throw "DFS Replication CSV not found: $CsvFolders" }
 
-# --- Loop through DFS root servers ------------------------------------------
-foreach ($Server in $dfsRootServers) {
+$timestamp = (Get-Date).ToString("yyyyMMdd-HHmmss")
+$logFile   = Join-Path $logsDir ("dfs__{0}__{1}.log" -f $PrimaryFileServer, $timestamp)
 
-    Write-Host "`n=== Starting DFS namespace and replication deployment on ${Server} ===" -ForegroundColor Cyan
-    $timestamp = (Get-Date).ToString("yyyyMMdd-HHmmss")
-    $logFile   = Join-Path $logsDir ("dfs__{0}__{1}.log" -f $Server, $timestamp)
+# --- Execute DFS provisioning remotely --------------------------------------
+Write-Host "`n=== Starting DFS Namespace & Replication deployment on $PrimaryFileServer ===" -ForegroundColor Cyan
 
-    try {
-        # Establish remote PowerShell session
-        $fqdn = "${Server}.ad.itsummerlab.local"
-        $Session = New-PSSession -ComputerName $fqdn -Credential $Cred -ErrorAction Stop
+try {
+    # Create PowerShell remoting session
+    $Session = New-PSSession -ComputerName "${PrimaryFileServer}.ad.itsummerlab.local" -Credential $Cred
 
-        # Ensure C:\Temp exists remotely
-        Invoke-Command -Session $Session -ScriptBlock {
-            param($TempPath)
-            if (-not (Test-Path $TempPath)) {
-                New-Item -ItemType Directory -Path $TempPath -Force | Out-Null
-            }
-        } -ArgumentList $TempPath
+    # Ensure temp directory exists remotely
+    Invoke-Command -Session $Session -ScriptBlock {
+        param($TempPath)
+        if (-not (Test-Path $TempPath)) {
+            New-Item -ItemType Directory -Path $TempPath -Force | Out-Null
+        }
+    } -ArgumentList $TempPath
 
-        # Copy DFS script and CSVs to remote server
-        Copy-Item -Path $DFSscript -Destination (Join-Path $TempPath "Create-DFS-Namespace-Replication.ps1") -ToSession $Session -Force
-        Copy-Item -Path $NamespacesCsv  -Destination (Join-Path $TempPath "dfs-namespaces.csv")  -ToSession $Session -Force
-        Copy-Item -Path $ReplicationCsv -Destination (Join-Path $TempPath "dfs-replications.csv") -ToSession $Session -Force
+    # Copy DFS script and CSV files to the remote file server
+    Copy-Item -Path $DFSScript     -Destination (Join-Path $TempPath "Create-DFS-Namespace-Replication.ps1") -ToSession $Session -Force
+    Copy-Item -Path $CsvNamespace  -Destination (Join-Path $TempPath (Split-Path $CsvNamespace -Leaf)) -ToSession $Session -Force
+    Copy-Item -Path $CsvFolders    -Destination (Join-Path $TempPath (Split-Path $CsvFolders -Leaf)) -ToSession $Session -Force
 
-        # --- Execute remotely ------------------------------------------------
-        Invoke-Command -Session $Session -ScriptBlock {
-            param($TempPath)
-            Write-Host "Running DFS Namespace and Replication script on $env:COMPUTERNAME..."
-            PowerShell.exe -ExecutionPolicy Bypass `
-                -File (Join-Path $TempPath "Create-DFS-Namespace-Replication.ps1") `
-                -CsvPath (Join-Path $TempPath "dfs-namespaces.csv") `
-                -FoldersCsvPath (Join-Path $TempPath "dfs-replications.csv") `
-                -Verbose
-        } -ArgumentList $TempPath *>&1 | Tee-Object -FilePath $logFile
+    # Execute the DFS provisioning script remotely
+    Invoke-Command -Session $Session -ScriptBlock {
+        param($TempPath, $CsvNamespace, $CsvFolders)
+        Write-Host "Running Create-DFS-Namespace-Replication.ps1 on $env:COMPUTERNAME..."
+        PowerShell.exe -ExecutionPolicy Bypass `
+            -File (Join-Path $TempPath "Create-DFS-Namespace-Replication.ps1") `
+            -CsvPath (Join-Path $TempPath $CsvNamespace) `
+            -FoldersCsvPath (Join-Path $TempPath $CsvFolders) `
+            -Verbose
+    } -ArgumentList $TempPath, (Split-Path $CsvNamespace -Leaf), (Split-Path $CsvFolders -Leaf) *>&1 | Tee-Object -FilePath $logFile
 
-        Write-Host "=== DFS deployment completed on ${Server} ===" -ForegroundColor Green
+    Write-Host "=== DFS Namespace and Replication deployment completed on ${PrimaryFileServer} ===" -ForegroundColor Green
 
-    } catch {
-        Write-Warning "Failed to execute DFS namespace and replication on ${Server}: $($_.Exception.Message)"
-        Add-Content -Path $logFile -Value ("[ERROR] {0} - Execution failed: {1}" -f (Get-Date), $_.Exception.Message)
-    } finally {
-        if ($Session) { Remove-PSSession $Session }
-    }
+} catch {
+    Write-Warning "Execution failed on ${PrimaryFileServer}: $($_.Exception.Message)"
+    Add-Content -Path $logFile -Value ("[ERROR] {0} - {1}" -f (Get-Date), $_.Exception.Message)
+} finally {
+    if ($Session) { Remove-PSSession $Session }
 }
-
-Write-Host "`nAll DFS root servers processed." -ForegroundColor Yellow
