@@ -8,7 +8,8 @@ function Show-Menu {
     Write-Host "3. Apply NTFS Permissions" -ForegroundColor Yellow
     Write-Host "4. Apply SMB Share Permissions" -ForegroundColor Yellow
     Write-Host "5. Configure DFS Namespace and Replication" -ForegroundColor Yellow
-    Write-Host "6. Exit" -ForegroundColor Yellow
+    Write-Host "6. Run Full Orchestration (One-Click)" -ForegroundColor Yellow
+    Write-Host "7. Exit" -ForegroundColor Yellow
     Write-Host "=============================================" -ForegroundColor Cyan
 }
 
@@ -83,6 +84,39 @@ function Run-DFS {
 }
 
 # -------------------------------
+# Function: Run Full Orchestration (One-Click)
+# -------------------------------
+function Run-FullOrchestration {
+    Write-Host "`n[+] Starting full orchestration process..." -ForegroundColor Cyan
+    try {
+        Write-Host "`n--- Step 1: Generate CSV Files ---" -ForegroundColor Magenta
+        python .\submodules\fileorg-permissions-generator\generate_csv.py
+        Write-Host "CSV generation completed successfully!" -ForegroundColor Green
+
+        Write-Host "`n--- Step 2: Create AD Domain Local Groups ---" -ForegroundColor Magenta
+        .\run-DomainLocal.ps1 -Verbose
+        Write-Host "AD Domain Local Groups created successfully!" -ForegroundColor Green
+
+        Write-Host "`n--- Step 3: Apply NTFS Permissions ---" -ForegroundColor Magenta
+        .\run-NTFS.ps1 -Verbose
+        Write-Host "NTFS permissions applied successfully!" -ForegroundColor Green
+
+        Write-Host "`n--- Step 4: Apply SMB Share Permissions ---" -ForegroundColor Magenta
+        .\run-SMB.ps1 -Verbose
+        Write-Host "SMB share permissions applied successfully!" -ForegroundColor Green
+
+        Write-Host "`n--- Step 5: Configure DFS Namespace and Replication ---" -ForegroundColor Magenta
+        .\run-DFS.ps1 -Verbose
+        Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor Green
+
+        Write-Host "`nFull orchestration completed successfully!" -ForegroundColor Green
+    } catch {
+        Write-Host "Error during full orchestration: $_" -ForegroundColor Red
+    }
+    Pause
+}
+
+# -------------------------------
 # Function: Close Program
 # -------------------------------
 function Exit-Script {
@@ -95,7 +129,7 @@ function Exit-Script {
 # -------------------------------
 do {
     Show-Menu
-    $choice = Read-Host "Select an option (1-6)"
+    $choice = Read-Host "Select an option (1-7)"
 
     switch ($choice) {
         1 { Run-GenerateCSV }
@@ -103,9 +137,10 @@ do {
         3 { Run-NTFS }
         4 { Run-SMB }
         5 { Run-DFS }
-        6 { Exit-Script }
+        6 { Run-FullOrchestration }
+        7 { Exit-Script }
         default {
-            Write-Host "Invalid selection. Please choose a valid option (1-6)." -ForegroundColor Red
+            Write-Host "Invalid selection. Please choose a valid option (1-7)." -ForegroundColor Red
             Pause
         }
     }
