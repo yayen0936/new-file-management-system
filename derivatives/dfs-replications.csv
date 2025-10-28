@@ -1,0 +1,3 @@
+Namespace,Folder,Server,SMBShare,ReplicationLocalPath
+Test,GoodSpotYYC,LAB-LOUIE,GoodSpotYYC$,D:\GoodSpotYYC
+Test,GoodSpotYYC,LAB-DEWEY,GoodSpotYYC$,E:\GoodSpotYYC
