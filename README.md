@@ -52,39 +52,36 @@ Step 1: **Navigate to the repository root directory**
 cd C:\Users\<replace>\Documents\new-file-management-system
 ```
 
-Step 2: **Generate input CSV files**
+Step 2: **Launch the Main Orchestrator Menu**
 ```powershell
-python .\submodules\fileorg-permissions-generator\generate_csv.py `
-  --input ".\inputs\file-org-folder-permissions.xlsx" `
-  --config ".\inputs\servers.json" `
-  --outdir ".\derivatives" `
-  --verbose
+.\main.ps1
 ```
 
-Step 3: **Create Domain Local Groups**
 ```powershell
-.\run-DomainLocal.ps1 -Verbose
+=============================================
+   FILE MANAGEMENT SYSTEM - MAIN MENU
+=============================================
+1. Generate CSV File
+2. Create AD Domain Local Groups
+3. Apply NTFS Permissions
+4. Apply SMB Share Permissions
+5. Configure DFS Namespace and Replication
+6. Run Full Orchestration (One-Click)
+7. Exit
+=============================================
+Select an option (1-7):
 ```
 
-Step 4: **Create Folder and Apply NTFS permissions**
-```powershell
-.\run-NTFS.ps1 -Verbose
 ```
+Each option executes a corresponding task:
 
-Step 5: **Share Folder and Apply SMB permissions**
-```powershell
-.\run-SMB.ps1 -Verbose
-```
-
-Step 6: **Create DFS namespace and replication**
-```powershell
-.\run-DFS.ps1 -Verbose
-```
-
-Step 7: **Run orchestrator**
-```powershell
-.\provision_all.ps1 `
- -Servers ".\inputs\servers.json" `
- -Permissions ".\inputs\file-org-folder-permissions.xlsx" `
- -Verbose
+| Menu Option       | Action                                             | Execution Context |
+|--------------     |---------                                           |------------------ |
+| **1**             | Generates new CSV files using the Python generator | Runs locally on Client |
+| **2**             | Creates Domain Local Groups in AD                  | Executes remotely on DC |
+| **3**             | Applies NTFS permissions                           | Executes remotely on each file server |
+| **4**             | Applies SMB share permissions                      | Executes remotely on each file server |
+| **5**             | Configures DFS namespace and replication           | Executes remotely on DC |
+| **6**             | Runs the full pipeline (1–5 sequentially)          | Orchestrates full remote provisioning |
+| **7**             | Exits the program                                  | — |
 ```
