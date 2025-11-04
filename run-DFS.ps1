@@ -3,7 +3,10 @@ param(
     [string]$ServersJson = ".\inputs\servers.json",
     [string]$DFSScript   = ".\submodules\dfs-namespace-replication\Create-DFS-Namespace-Replication.ps1",
     [string]$Derivatives = ".\derivatives",
-    [string]$TempPath    = "C:\Temp"
+    [string]$TempPath    = "C:\Temp",
+
+    [Parameter(Mandatory)]
+    [PSCredential]$Cred
 )
 
 # --- Validate paths ----------------------------------------------------------
@@ -31,7 +34,7 @@ $logsDir = Join-Path $PSScriptRoot "logs"
 if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Force -Path $logsDir | Out-Null }
 
 # --- Prompt for credentials --------------------------------------------------
-$Cred = Get-Credential -Message "Enter domain admin credentials (e.g., ITSADLAB\yayen)"
+# $Cred = Get-Credential -Message "Enter domain admin credentials (e.g., ITSADLAB\yayen)"
 
 # --- Locate DFS CSV manifests -----------------------------------------------
 $CsvNamespace = Join-Path $Derivatives "dfs-namespaces.csv"
@@ -71,6 +74,7 @@ try {
             -File (Join-Path $TempPath "Create-DFS-Namespace-Replication.ps1") `
             -CsvPath (Join-Path $TempPath $CsvNamespace) `
             -FoldersCsvPath (Join-Path $TempPath $CsvFolders) `
+            -Cred $Cred `
             -Verbose
     } -ArgumentList $TempPath, (Split-Path $CsvNamespace -Leaf), (Split-Path $CsvFolders -Leaf) *>&1 | Tee-Object -FilePath $logFile
 
