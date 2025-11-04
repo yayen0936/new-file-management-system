@@ -75,7 +75,7 @@ function Run-SMB {
 function Run-DFS {
     Write-Host "`n[+] Configuring DFS Namespace and Replication..." -ForegroundColor Cyan
     try {
-        .\run-DFS.ps1 -Verbose
+        .\run-DFS.ps1 -Cred $Cred -Verbose
         Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor Green
     } catch {
         Write-Host "Error configuring DFS: $_" -ForegroundColor Red
@@ -90,25 +90,25 @@ function Run-FullOrchestration {
     Write-Host "`n[+] Starting full orchestration process..." -ForegroundColor Cyan
     try {
         Write-Host "`n--- Step 1: Generate CSV Files ---" -ForegroundColor Magenta
-        python .\submodules\fileorg-permissions-generator\generate_csv.py
+        Run-GenerateCSV
         Write-Host "CSV generation completed successfully!" -ForegroundColor Green
 
         Write-Host "`n--- Step 2: Create AD Domain Local Groups ---" -ForegroundColor Magenta
-        .\run-DomainLocal.ps1 -Verbose
+        Run-DomainLocal
         Write-Host "AD Domain Local Groups created successfully!" -ForegroundColor Green
 
         Write-Host "`n--- Step 3: Apply NTFS Permissions ---" -ForegroundColor Magenta
-        .\run-NTFS.ps1 -Verbose
+        Run-NTFS
         Write-Host "NTFS permissions applied successfully!" -ForegroundColor Green
 
         Write-Host "`n--- Step 4: Apply SMB Share Permissions ---" -ForegroundColor Magenta
-        .\run-SMB.ps1 -Verbose
+        Run-SMB
         Write-Host "SMB share permissions applied successfully!" -ForegroundColor Green
 
         Write-Host "`n--- Step 5: Configure DFS Namespace and Replication ---" -ForegroundColor Magenta
-        .\run-DFS.ps1 -Verbose
-        Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor Green
+        Run-DFS
 
+        Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor Green
         Write-Host "`nFull orchestration completed successfully!" -ForegroundColor Green
     } catch {
         Write-Host "Error during full orchestration: $_" -ForegroundColor Red
@@ -127,6 +127,10 @@ function Exit-Script {
 # -------------------------------
 # Main Loop
 # -------------------------------
+
+# <add to ask for credentials (only once user is authenticated)
+$Cred = Get-Credential -Message "Enter domain admin credentials"
+
 do {
     Show-Menu
     $choice = Read-Host "Select an option (1-7)"
