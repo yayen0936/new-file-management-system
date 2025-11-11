@@ -68,15 +68,19 @@ try {
 
     # Execute the DFS provisioning script remotely
     Invoke-Command -Session $Session -ScriptBlock {
-        param($TempPath, $CsvNamespace, $CsvFolders)
-        Write-Host "Running Create-DFS-Namespace-Replication.ps1 on $env:COMPUTERNAME..."
-        PowerShell.exe -ExecutionPolicy Bypass `
-            -File (Join-Path $TempPath "Create-DFS-Namespace-Replication.ps1") `
-            -CsvPath (Join-Path $TempPath $CsvNamespace) `
-            -FoldersCsvPath (Join-Path $TempPath $CsvFolders) `
-            -Cred $Cred `
+    param($Cred)
+
+    Write-Host "Running Create-DFS-Namespace-Replication.ps1 locally on $env:COMPUTERNAME..."
+
+    # Run DFS script in a local logon on the server
+    Invoke-Command -ComputerName $env:COMPUTERNAME -Credential $Cred -ScriptBlock {
+        & "C:\Temp\Create-DFS-Namespace-Replication.ps1" `
+            -CsvPath  "C:\Temp\dfs-namespaces.csv" `
+            -FoldersCsvPath "C:\Temp\dfs-replications.csv" `
+            -Cred $Using:Cred `
             -Verbose
-    } -ArgumentList $TempPath, (Split-Path $CsvNamespace -Leaf), (Split-Path $CsvFolders -Leaf) *>&1 | Tee-Object -FilePath $logFile
+        }
+    } -ArgumentList $Cred | Tee-Object -FilePath $logFile
 
     Write-Host "=== DFS Namespace and Replication deployment completed on ${PrimaryFileServer} ===" -ForegroundColor Green
 
