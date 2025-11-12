@@ -81,7 +81,7 @@ try {
     Write-Host "=== DFS Namespace and Replication deployment completed on ${PrimaryFileServer} ===" -ForegroundColor Green
 
     } catch {
-        Write-Warning "Failed to execute DFS namespace and replication on ${Server}: $($_.Exception.Message)"
+        Write-Warning "Failed to execute DFS namespace and replication on ${PrimaryFileServer}: $($_.Exception.Message)"
         Add-Content -Path $logFile -Value ("[ERROR] {0} - Execution failed: {1}" -f (Get-Date), $_.Exception.Message)
     } finally {
         if ($Session) { Remove-PSSession $Session }
