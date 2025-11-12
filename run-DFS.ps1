@@ -51,7 +51,7 @@ Write-Host "`n=== Starting DFS Namespace & Replication deployment on $PrimaryFil
 
 try {
     # Create PowerShell remoting session
-    $Session = New-PSSession -ComputerName "${PrimaryFileServer}.ad.itsummerlab.local" -Credential $Cred
+    $Session = New-PSSession -ComputerName "${PrimaryFileServer}.ad.itsummerlab.local" -Credential $Cred -Authentication Kerberos
 
     # Ensure temp directory exists remotely
     Invoke-Command -Session $Session -ScriptBlock {
@@ -67,20 +67,16 @@ try {
     Copy-Item -Path $CsvFolders    -Destination (Join-Path $TempPath (Split-Path $CsvFolders -Leaf)) -ToSession $Session -Force
 
     # Execute the DFS provisioning script remotely
+    
     Invoke-Command -Session $Session -ScriptBlock {
-    param($Cred)
-
     Write-Host "Running Create-DFS-Namespace-Replication.ps1 locally on $env:COMPUTERNAME..."
+    & "C:\Temp\Create-DFS-Namespace-Replication.ps1" `
+        -CsvPath        "C:\Temp\dfs-namespaces.csv" `
+        -FoldersCsvPath "C:\Temp\dfs-replications.csv" `
+        -Cred $using:Cred `
+        -Verbose
+    } | Tee-Object -FilePath $logFile
 
-    # Run DFS script in a local logon on the server
-    Invoke-Command -ComputerName $env:COMPUTERNAME -Credential $Cred -ScriptBlock {
-        & "C:\Temp\Create-DFS-Namespace-Replication.ps1" `
-            -CsvPath  "C:\Temp\dfs-namespaces.csv" `
-            -FoldersCsvPath "C:\Temp\dfs-replications.csv" `
-            -Cred $Using:Cred `
-            -Verbose
-        }
-    } -ArgumentList $Cred | Tee-Object -FilePath $logFile
 
     Write-Host "=== DFS Namespace and Replication deployment completed on ${PrimaryFileServer} ===" -ForegroundColor Green
 
