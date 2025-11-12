@@ -23,12 +23,12 @@ function Show-Menu {
 # Function: Generate CSV File
 # -------------------------------
 function Run-GenerateCSV {
-    Write-Host "`n[+] Running CSV generation locally..." -ForegroundColor White
+    Write-Host "`n[+] Running CSV generation locally..." -ForegroundColor DarkGray
     try {
         python .\submodules\fileorg-permissions-generator\generate_csv.py
-        Write-Host "CSV generation completed successfully!" -ForegroundColor White
+        Write-Host "CSV generation completed successfully!" -ForegroundColor Green
     } catch {
-        Write-Host "Error generating CSV files: $_" -ForegroundColor White
+        Write-Host "Error generating CSV files: $_" -ForegroundColor Red
     }
     Pause
 }
@@ -37,12 +37,12 @@ function Run-GenerateCSV {
 # Function: Create AD Domain Local Groups
 # -------------------------------
 function Run-DomainLocal {
-    Write-Host "`n[+] Executing AD Domain Local Groups provisioning..." -ForegroundColor White
+    Write-Host "`n[+] Executing AD Domain Local Groups provisioning..." -ForegroundColor DarkGray
     try {
         .\run-DomainLocal.ps1 -Verbose
-        Write-Host "AD Domain Local Groups created successfully!" -ForegroundColor White
+        Write-Host "AD Domain Local Groups created successfully!" -ForegroundColor Green
     } catch {
-        Write-Host "Error running Domain Local Groups script: $_" -ForegroundColor White
+        Write-Host "Error running Domain Local Groups script: $_" -ForegroundColor Red
     }
     Pause
 }
@@ -51,12 +51,12 @@ function Run-DomainLocal {
 # Function: Create Folder and Apply NTFS Permissions
 # -------------------------------
 function Run-NTFS {
-    Write-Host "`n[+] Applying NTFS permissions..." -ForegroundColor White
+    Write-Host "`n[+] Applying NTFS permissions..." -ForegroundColor DarkGray
     try {
         .\run-NTFS.ps1 -Verbose
-        Write-Host "NTFS permissions applied successfully!" -ForegroundColor White
+        Write-Host "NTFS permissions applied successfully!" -ForegroundColor Green
     } catch {
-        Write-Host "Error applying NTFS permissions: $_" -ForegroundColor White
+        Write-Host "Error applying NTFS permissions: $_" -ForegroundColor Red
     }
     Pause
 }
@@ -65,12 +65,12 @@ function Run-NTFS {
 # Function: Share Folder and Apply SMB Share Permissions
 # -------------------------------
 function Run-SMB {
-    Write-Host "`n[+] Applying SMB share permissions..." -ForegroundColor White
+    Write-Host "`n[+] Applying SMB share permissions..." -ForegroundColor DarkGray
     try {
         .\run-SMB.ps1 -Verbose
-        Write-Host "SMB share permissions applied successfully!" -ForegroundColor White
+        Write-Host "SMB share permissions applied successfully!" -ForegroundColor Green
     } catch {
-        Write-Host "Error applying SMB permissions: $_" -ForegroundColor White
+        Write-Host "Error applying SMB permissions: $_" -ForegroundColor Red
     }
     Pause
 }
@@ -79,12 +79,12 @@ function Run-SMB {
 # Function: Configure DFS Namespace and Replication
 # -------------------------------
 function Run-DFS {
-    Write-Host "`n[+] Configuring DFS Namespace and Replication..." -ForegroundColor White
+    Write-Host "`n[+] Configuring DFS Namespace and Replication..." -ForegroundColor DarkGray
     try {
         .\run-DFS.ps1 -Cred $Cred -Verbose
-        Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor White
+        Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor Green
     } catch {
-        Write-Host "Error configuring DFS: $_" -ForegroundColor White
+        Write-Host "Error configuring DFS: $_" -ForegroundColor Red
     }
     Pause
 }
@@ -93,31 +93,31 @@ function Run-DFS {
 # Function: Run Full Orchestration (One-Click)
 # -------------------------------
 function Run-FullOrchestration {
-    Write-Host "`n[+] Starting full orchestration process..." -ForegroundColor White
+    Write-Host "`n[+] Starting full orchestration process..." -ForegroundColor DarkGray
     try {
         Write-Host "`n--- Step 1: Generate CSV Files ---" -ForegroundColor White
         Run-GenerateCSV
-        Write-Host "CSV generation completed successfully!" -ForegroundColor White
+        Write-Host "CSV generation completed successfully!" -ForegroundColor Green
 
         Write-Host "`n--- Step 2: Create AD Domain Local Groups ---" -ForegroundColor White
         Run-DomainLocal
-        Write-Host "AD Domain Local Groups created successfully!" -ForegroundColor White
+        Write-Host "AD Domain Local Groups created successfully!" -ForegroundColor Green
 
         Write-Host "`n--- Step 3: Apply NTFS Permissions ---" -ForegroundColor White
         Run-NTFS
-        Write-Host "NTFS permissions applied successfully!" -ForegroundColor White
+        Write-Host "NTFS permissions applied successfully!" -ForegroundColor Green
 
         Write-Host "`n--- Step 4: Apply SMB Share Permissions ---" -ForegroundColor White
         Run-SMB
-        Write-Host "SMB share permissions applied successfully!" -ForegroundColor White
+        Write-Host "SMB share permissions applied successfully!" -ForegroundColor Green
 
         Write-Host "`n--- Step 5: Configure DFS Namespace and Replication ---" -ForegroundColor White
         Run-DFS
 
-        Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor White
-        Write-Host "`nFull orchestration completed successfully!" -ForegroundColor White
+        Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor Green
+        Write-Host "`nFull orchestration completed successfully!" -ForegroundColor Green
     } catch {
-        Write-Host "Error during full orchestration: $_" -ForegroundColor White
+        Write-Host "Error during full orchestration: $_" -ForegroundColor Red
     }
     Pause
 }
@@ -126,7 +126,7 @@ function Run-FullOrchestration {
 # Function: Close Program
 # -------------------------------
 function Exit-Script {
-    Write-Host "`nExiting the orchestrator...`n" -ForegroundColor White
+    Write-Host "`nExiting the orchestrator...`n" -ForegroundColor DarkGray
     exit
 }
 
