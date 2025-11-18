@@ -3,7 +3,10 @@ param(
     [string]$ServersJson = ".\inputs\servers.json",
     [string]$NTFSScript  = ".\submodules\ntfs-smb-permissions\Set-NTFS-Permissions.ps1",
     [string]$Derivatives = ".\derivatives",
-    [string]$TempPath    = "C:\Temp"
+    [string]$TempPath    = "C:\Temp",
+
+    [Parameter(Mandatory)]
+    [PSCredential]$Cred
 )
 
 # --- Validate dependencies ---------------------------------------------------
@@ -17,9 +20,6 @@ $fileServers   = $serversConfig.file_servers.PSObject.Properties.Name
 # --- Prepare logging directory ----------------------------------------------
 $logsDir = Join-Path $PSScriptRoot "logs"
 if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Force -Path $logsDir | Out-Null }
-
-# --- Prompt for credential once ---------------------------------------------
-$Cred = Get-Credential -Message "Enter domain admin credentials (e.g., ITSADLAB\yayen)"
 
 # --- Import AD module -------------------------------------------------------
 try {
