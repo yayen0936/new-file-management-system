@@ -90,7 +90,7 @@ function Run-DomainLocal {
 function Run-NTFS {
     Write-Host "`n[+] Applying NTFS permissions..." -ForegroundColor DarkGray
     try {
-        .\run-NTFS.ps1 -Verbose
+        .\run-NTFS.ps1 -Cred $Cred -Verbose
         Write-Host "NTFS permissions applied successfully!" -ForegroundColor Green
     } catch {
         Write-Host "Error applying NTFS permissions: $_" -ForegroundColor Red
