@@ -3,7 +3,10 @@ param(
     [string]$ServersJson = ".\inputs\servers.json",
     [string]$SMBScript   = ".\submodules\ntfs-smb-permissions\Set-SMB-Share-Permissions.ps1",
     [string]$Derivatives = ".\derivatives",
-    [string]$TempPath    = "C:\Temp"
+    [string]$TempPath    = "C:\Temp",
+
+    [Parameter(Mandatory)]
+    [PSCredential]$Cred
 )
 
 # --- Ensure user can run scripts ---------------------------------------------
@@ -31,9 +34,6 @@ $fileServers   = $serversConfig.file_servers.PSObject.Properties.Name
 # --- Prepare logging directory ----------------------------------------------
 $logsDir = Join-Path $PSScriptRoot "logs"
 if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Force -Path $logsDir | Out-Null }
-
-# --- Prompt for credential once ---------------------------------------------
-$Cred = Get-Credential -Message "Enter domain admin credentials (e.g., ITSADLAB\yayen)"
 
 # --- Loop through servers ----------------------------------------------------
 foreach ($Server in $fileServers) {
