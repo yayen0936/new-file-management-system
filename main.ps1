@@ -104,7 +104,7 @@ function Run-NTFS {
 function Run-SMB {
     Write-Host "`n[+] Applying SMB share permissions..." -ForegroundColor DarkGray
     try {
-        .\run-SMB.ps1 -Verbose
+        .\run-SMB.ps1 -Cred $Cred -Verbose
         Write-Host "SMB share permissions applied successfully!" -ForegroundColor Green
     } catch {
         Write-Host "Error applying SMB permissions: $_" -ForegroundColor Red
