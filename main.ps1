@@ -25,8 +25,45 @@ function Show-Menu {
 function Run-GenerateCSV {
     Write-Host "`n[+] Running CSV generation locally..." -ForegroundColor DarkGray
     try {
-        python .\submodules\fileorg-permissions-generator\generate_csv.py
-        Write-Host "CSV generation completed successfully!" -ForegroundColor Green
+        $repoRoot = $PSScriptRoot
+
+        $input  = Join-Path $repoRoot "inputs\file-org-folder-permissions.xlsx"
+        $config = Join-Path $repoRoot "inputs\servers.json"
+        $outdir = Join-Path $repoRoot "derivatives"
+        $script = Join-Path $repoRoot "submodules\fileorg-permissions-generator\generate_csv.py"
+
+        if (-not (Test-Path $input)) {
+            Write-Host "[!] Input file not found: $input" -ForegroundColor Red
+            return
+        }
+
+        if (-not (Test-Path $config)) {
+            Write-Host "[!] Config file not found: $config" -ForegroundColor Red
+            return
+        }
+
+        if (-not (Test-Path $script)) {
+            Write-Host "[!] CSV generator script not found: $script" -ForegroundColor Red
+            return
+        }
+
+        # Ensure output directory exists
+        if (-not (Test-Path $outdir)) {
+            New-Item -ItemType Directory -Path $outdir | Out-Null
+        }
+
+        # Call Python with the required arguments
+        & python $script `
+            --input  $input `
+            --config $config `
+            --outdir $outdir `
+            --verbose
+
+        if ($LASTEXITCODE -eq 0) {
+            Write-Host "CSV generation completed successfully!" -ForegroundColor Green
+        } else {
+            Write-Host "[!] CSV generation script exited with code $LASTEXITCODE" -ForegroundColor Yellow
+        }
     } catch {
         Write-Host "Error generating CSV files: $_" -ForegroundColor Red
     }
