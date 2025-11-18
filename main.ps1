@@ -76,7 +76,7 @@ function Run-GenerateCSV {
 function Run-DomainLocal {
     Write-Host "`n[+] Executing AD Domain Local Groups provisioning..." -ForegroundColor DarkGray
     try {
-        .\run-DomainLocal.ps1 -Verbose
+        .\run-DomainLocal.ps1 -Cred $Cred -Verbose
         Write-Host "AD Domain Local Groups created successfully!" -ForegroundColor Green
     } catch {
         Write-Host "Error running Domain Local Groups script: $_" -ForegroundColor Red
