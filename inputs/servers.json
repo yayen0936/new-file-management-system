@@ -4,13 +4,11 @@
 
   "file_servers": {
     "LAB-LOUIE": { "drive_root": "D:\\", "folder_prefix": "" },
-    "LAB-DEWEY": { "drive_root": "E:\\", "folder_prefix": "" },
-    "LAB-HUEY":  { "drive_root": "D:\\", "folder_prefix": "" }
+    "LAB-DEWEY": { "drive_root": "E:\\", "folder_prefix": "" }
   },
 
   "dfs_root_servers": [
     "LAB-DC03",
-    "LAB-DEWEY",
-    "LAB-HUEY"
+    "LAB-DEWEY"
   ]
 }
