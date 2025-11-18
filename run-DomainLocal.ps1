@@ -3,7 +3,10 @@ param(
     [string]$ServersJson   = ".\inputs\servers.json",
     [string]$ADGroupScript = ".\submodules\ad-security-groups\Create-AD-DomainLocal-Groups.ps1",
     [string]$Derivatives   = ".\derivatives",
-    [string]$TempPath      = "C:\Temp"
+    [string]$TempPath      = "C:\Temp",
+
+    [Parameter(Mandatory)]
+    [PSCredential]$Cred
 )
 
 # --- Validate paths ----------------------------------------------------------
@@ -24,9 +27,6 @@ Write-Host "`nPrimary Domain Controller detected: $PrimaryDC" -ForegroundColor C
 # --- Prepare logging directory ----------------------------------------------
 $logsDir = Join-Path $PSScriptRoot "logs"
 if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Force -Path $logsDir | Out-Null }
-
-# --- Prompt for domain admin credentials ------------------------------------
-$Cred = Get-Credential -Message "Enter domain admin credentials (e.g., ITSADLAB\yayen)"
 
 # --- Validate AD module locally ---------------------------------------------
 try {
