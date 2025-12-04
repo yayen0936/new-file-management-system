@@ -1,42 +1,45 @@
 # New File Management System
 
 This repository is a project for automating the provisioning and management of:
- - **Active Directory (AD) security groups**
- - **NTFS and SMB file permissions**
- - **DFS namespaces and replication**
+ - **Active Directory (AD) Domain Local security groups**
+ - **NTFS and SMB permissions across file servers (LOUIE and DEWEY)**
+ - **DFS Namespaces and DFS Replication**
 
-The repo combines input CSV definitions, child repositories as submodules, and a top-level orchestrator script that executes all steps in sequence. 
-
-It follows Microsoft best practices for PowerShell (Verb-Noun naming), and organizes files into inputs, submodules, docs, and logs for clarity.
+It uses a combination of:
+- **Input files (Excel/CSV)**
+- **Python-based CSV generator**
+- **PowerShell submodules**
+- **A main menu–driven orchestrator (main.ps1)**
 
 ## 📂 Repository Structure
 
 ```
 new-file-management-system/
 │
-├─ derivatives/                     # CSV inputs
+├─ derivatives/                     # Auto-generated CSV outputs
 │  ├─ ad-domainlocal-groups.csv
-│  ├─ ntfs-permissions.csv
-│  ├─ smb-share-permissions.csv
+│  ├─ ntfs-permissions__SERVER.csv
+│  ├─ smb-share-permissions__SERVER.csv
 │  ├─ dfs-namespaces.csv
 │  ├─ dfs-replications.csv
 │
-├─ inputs/                          # pipeline config
-│  └─ pipeline.config.json          # Orchestrator step definitions
+├─ inputs/                          # Input & config files
+│  ├─ file-org-folder-permissions.xlsx
+│  ├─ servers.json                  # File servers, DFS root servers, share suffix
 │
-├─ logs/
+├─ logs/                            # Execution logs
 │
-├─ submodules/                      # child repos
-│  ├─ ad-security-groups/
-│  ├─ ntfs-smb-permissions/
-│  ├─ dfs-namespace-replication/
-│  └─ fileorg-powershell-inputs/
+├─ submodules/                      # Independent modules (Git submodules)
+│  ├─ ad-security-groups/           # Creates AD Domain Local groups
+│  ├─ ntfs-smb-permissions/         # Sets NTFS & SMB permissions
+│  ├─ dfs-namespace-replication/    # DFS namespaces & replication config
+│  └─ fileorg-permissions-generator/# Python CSV generator
 │
-├─ provision_all.ps1                # orchestrator to execute full pipeline
-├─ run-DomainLocal.ps1              # orchestrator to create domain local groups
-├─ run-NTFS.ps1                     # orchestrator to apply NTFS permissions
-├─ run-SMB.ps1                      # orchestrator to apply SMB share & permissions
-├─ run-DFS.ps1                      # orchestrator to apply DFS namespace & replication
+├─ run-DomainLocal.ps1              # Individual AD group creation
+├─ run-NTFS.ps1                     # Individual NTFS permission provisioning
+├─ run-SMB.ps1                      # Individual SMB share provisioning
+├─ run-DFS.ps1                      # Individual DFS namespace/replication
+├─ main.ps1                         # NEW main menu-based orchestrator
 |
 ├─ .gitmodules                      # submodule references
 ├─ .gitignore
@@ -49,7 +52,7 @@ new-file-management-system/
 
 Step 1: **Navigate to the repository root directory**
 ```powershell
-cd C:\Users\<replace>\Documents\new-file-management-system
+cd C:\Users\<your-name>\Documents\new-file-management-system
 ```
 
 Step 2: **Launch the Main Orchestrator Menu**
