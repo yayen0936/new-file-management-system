@@ -18,9 +18,10 @@ try {
     $serversConfig = Get-Content $ServersJson -Raw | ConvertFrom-Json
 
     # Pick the first file server as primary (e.g., LAB-LOUIE)
-    $FileServers = $serversConfig.file_servers.PSObject.Properties.Name
-    if (-not $FileServers) { throw "No file_servers found in $ServersJson" }
-    $PrimaryFileServer = $FileServers | Select-Object -First 1
+    $dfs_root_servers = $serversConfig.dfs_root_servers
+    # $FileServers = $serversConfig.file_servers.PSObject.Properties.Name
+    if (-not $dfs_root_servers) { throw "No file_servers found in $ServersJson" }
+    $PrimaryFileServer = $dfs_root_servers | Select-Object -First 1
 
     if (-not $PrimaryFileServer) { throw "Primary file server not detected in $ServersJson" }
 } catch {
