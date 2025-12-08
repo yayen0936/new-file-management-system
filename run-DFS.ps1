@@ -37,6 +37,7 @@ if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Force -Path $logs
 # --- Locate DFS CSV manifests -----------------------------------------------
 $CsvNamespace = Join-Path $Derivatives "dfs-namespaces.csv"
 $CsvFolders   = Join-Path $Derivatives "dfs-replications.csv"
+$CsvAbe   = Join-Path $Derivatives "dfs-abe.csv"
 
 if (-not (Test-Path $CsvNamespace)) { throw "DFS Namespace CSV not found: $CsvNamespace" }
 if (-not (Test-Path $CsvFolders))   { throw "DFS Replication CSV not found: $CsvFolders" }
@@ -63,6 +64,7 @@ try {
     Copy-Item -Path $DFSScript     -Destination (Join-Path $TempPath "Create-DFS-Namespace-Replication.ps1") -ToSession $Session -Force
     Copy-Item -Path $CsvNamespace  -Destination (Join-Path $TempPath (Split-Path $CsvNamespace -Leaf)) -ToSession $Session -Force
     Copy-Item -Path $CsvFolders    -Destination (Join-Path $TempPath (Split-Path $CsvFolders -Leaf)) -ToSession $Session -Force
+    Copy-Item -Path $CsvAbe        -Destination (Join-Path $TempPath (Split-Path $CsvAbe -Leaf)) -ToSession $Session -Force
 
     # Execute the DFS provisioning script remotely
     Invoke-Command -Session $Session -ScriptBlock {
@@ -74,6 +76,7 @@ try {
         & "C:\Temp\Create-DFS-Namespace-Replication.ps1" `
             -CsvPath  "C:\Temp\dfs-namespaces.csv" `
             -FoldersCsvPath "C:\Temp\dfs-replications.csv" `
+            -AbeCsvPath "C:\Temp\dfs-abe.csv" `
             -Cred $Using:Cred `
             -Verbose *>&1
     } *>&1 | Tee-Object -FilePath $logFile
