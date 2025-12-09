@@ -1,0 +1,71 @@
+Namespace,Folder,Server,SMBShare,ReplicationLocalPath
+FedYYC,Action Grants,LAB-LOUIE,FedYYC-ActionGrants$,D:\FedYYC-Action Grants
+FedYYC,Action Grants,LAB-DEWEY,FedYYC-ActionGrants$,E:\FedYYC-Action Grants
+FedYYC,ActivateYYC,LAB-LOUIE,FedYYC-ActivateYYC$,D:\FedYYC-ActivateYYC
+FedYYC,ActivateYYC,LAB-DEWEY,FedYYC-ActivateYYC$,E:\FedYYC-ActivateYYC
+FedYYC,Annual General Meeting,LAB-LOUIE,FedYYC-AnnualGeneralMeeting$,D:\FedYYC-Annual General Meeting
+FedYYC,Annual General Meeting,LAB-DEWEY,FedYYC-AnnualGeneralMeeting$,E:\FedYYC-Annual General Meeting
+FedYYC,Brand Masters,LAB-LOUIE,FedYYC-BrandMasters$,D:\FedYYC-Brand Masters
+FedYYC,Brand Masters,LAB-DEWEY,FedYYC-BrandMasters$,E:\FedYYC-Brand Masters
+FedYYC,Business Directory,LAB-LOUIE,FedYYC-BusinessDirectory$,D:\FedYYC-Business Directory
+FedYYC,Business Directory,LAB-DEWEY,FedYYC-BusinessDirectory$,E:\FedYYC-Business Directory
+FedYYC,Citizens + Students,LAB-LOUIE,FedYYC-CitizensStudents$,D:\FedYYC-Citizens + Students
+FedYYC,Citizens + Students,LAB-DEWEY,FedYYC-CitizensStudents$,E:\FedYYC-Citizens + Students
+FedYYC,ClimateReadyYYC,LAB-LOUIE,FedYYC-ClimateReadyYYC$,D:\FedYYC-ClimateReadyYYC
+FedYYC,ClimateReadyYYC,LAB-DEWEY,FedYYC-ClimateReadyYYC$,E:\FedYYC-ClimateReadyYYC
+FedYYC,Communications,LAB-LOUIE,FedYYC-Communications$,D:\FedYYC-Communications
+FedYYC,Communications,LAB-DEWEY,FedYYC-Communications$,E:\FedYYC-Communications
+FedYYC,Consulting,LAB-LOUIE,FedYYC-Consulting$,D:\FedYYC-Consulting
+FedYYC,Consulting,LAB-DEWEY,FedYYC-Consulting$,E:\FedYYC-Consulting
+FedYYC,Energizing Spaces,LAB-LOUIE,FedYYC-EnergizingSpaces$,D:\FedYYC-Energizing Spaces
+FedYYC,Energizing Spaces,LAB-DEWEY,FedYYC-EnergizingSpaces$,E:\FedYYC-Energizing Spaces
+FedYYC,Exploring Communities,LAB-LOUIE,FedYYC-ExploringCommunities$,D:\FedYYC-Exploring Communities
+FedYYC,Exploring Communities,LAB-DEWEY,FedYYC-ExploringCommunities$,E:\FedYYC-Exploring Communities
+FedYYC,External Committees,LAB-LOUIE,FedYYC-ExternalCommittees$,D:\FedYYC-External Committees
+FedYYC,External Committees,LAB-DEWEY,FedYYC-ExternalCommittees$,E:\FedYYC-External Committees
+FedYYC,Financial Literacy,LAB-LOUIE,FedYYC-FinancialLiteracy$,D:\FedYYC-Financial Literacy
+FedYYC,Financial Literacy,LAB-DEWEY,FedYYC-FinancialLiteracy$,E:\FedYYC-Financial Literacy
+FedYYC,Forum,LAB-LOUIE,FedYYC-Forum$,D:\FedYYC-Forum
+FedYYC,Forum,LAB-DEWEY,FedYYC-Forum$,E:\FedYYC-Forum
+FedYYC,Fund Development,LAB-LOUIE,FedYYC-FundDevelopment$,D:\FedYYC-Fund Development
+FedYYC,Fund Development,LAB-DEWEY,FedYYC-FundDevelopment$,E:\FedYYC-Fund Development
+FedYYC,Good Places Project,LAB-LOUIE,FedYYC-GoodPlacesProject$,D:\FedYYC-Good Places Project
+FedYYC,Good Places Project,LAB-DEWEY,FedYYC-GoodPlacesProject$,E:\FedYYC-Good Places Project
+FedYYC,Hero Awards,LAB-LOUIE,FedYYC-HeroAwards$,D:\FedYYC-Hero Awards
+FedYYC,Hero Awards,LAB-DEWEY,FedYYC-HeroAwards$,E:\FedYYC-Hero Awards
+FedYYC,IT,LAB-LOUIE,FedYYC-IT$,D:\FedYYC-IT
+FedYYC,IT,LAB-DEWEY,FedYYC-IT$,E:\FedYYC-IT
+FedYYC,Internal Committees,LAB-LOUIE,FedYYC-InternalCommittees$,D:\FedYYC-Internal Committees
+FedYYC,Internal Committees,LAB-DEWEY,FedYYC-InternalCommittees$,E:\FedYYC-Internal Committees
+FedYYC,Jane's Walk,LAB-LOUIE,FedYYC-JanesWalk$,D:\FedYYC-Jane's Walk
+FedYYC,Jane's Walk,LAB-DEWEY,FedYYC-JanesWalk$,E:\FedYYC-Jane's Walk
+FedYYC,Lunch n Learns,LAB-LOUIE,FedYYC-LunchnLearns$,D:\FedYYC-Lunch n Learns
+FedYYC,Lunch n Learns,LAB-DEWEY,FedYYC-LunchnLearns$,E:\FedYYC-Lunch n Learns
+FedYYC,March CA Awareness,LAB-LOUIE,FedYYC-MarchCAAwareness$,D:\FedYYC-March CA Awareness
+FedYYC,March CA Awareness,LAB-DEWEY,FedYYC-MarchCAAwareness$,E:\FedYYC-March CA Awareness
+FedYYC,Member Engagement,LAB-LOUIE,FedYYC-MemberEngagement$,D:\FedYYC-Member Engagement
+FedYYC,Member Engagement,LAB-DEWEY,FedYYC-MemberEngagement$,E:\FedYYC-Member Engagement
+FedYYC,Member Resource Library,LAB-LOUIE,FedYYC-MemberResourceLibrary$,D:\FedYYC-Member Resource Library
+FedYYC,Member Resource Library,LAB-DEWEY,FedYYC-MemberResourceLibrary$,E:\FedYYC-Member Resource Library
+FedYYC,Membership,LAB-LOUIE,FedYYC-Membership$,D:\FedYYC-Membership
+FedYYC,Membership,LAB-DEWEY,FedYYC-Membership$,E:\FedYYC-Membership
+FedYYC,Milestones,LAB-LOUIE,FedYYC-Milestones$,D:\FedYYC-Milestones
+FedYYC,Milestones,LAB-DEWEY,FedYYC-Milestones$,E:\FedYYC-Milestones
+FedYYC,Neighbour Day,LAB-LOUIE,FedYYC-NeighbourDay$,D:\FedYYC-Neighbour Day
+FedYYC,Neighbour Day,LAB-DEWEY,FedYYC-NeighbourDay$,E:\FedYYC-Neighbour Day
+FedYYC,Newsletter,LAB-LOUIE,FedYYC-Newsletter$,D:\FedYYC-Newsletter
+FedYYC,Newsletter,LAB-DEWEY,FedYYC-Newsletter$,E:\FedYYC-Newsletter
+FedYYC,One-on-One Support,LAB-LOUIE,FedYYC-OneonOneSupport$,D:\FedYYC-One-on-One Support
+FedYYC,One-on-One Support,LAB-DEWEY,FedYYC-OneonOneSupport$,E:\FedYYC-One-on-One Support
+FedYYC,Partners In Planning,LAB-LOUIE,FedYYC-PartnersInPlanning$,D:\FedYYC-Partners In Planning
+FedYYC,Partners In Planning,LAB-DEWEY,FedYYC-PartnersInPlanning$,E:\FedYYC-Partners In Planning
+FedYYC,Social Media,LAB-LOUIE,FedYYC-SocialMedia$,D:\FedYYC-Social Media
+FedYYC,Social Media,LAB-DEWEY,FedYYC-SocialMedia$,E:\FedYYC-Social Media
+FedYYC,Sponsors,LAB-LOUIE,FedYYC-Sponsors$,D:\FedYYC-Sponsors
+FedYYC,Sponsors,LAB-DEWEY,FedYYC-Sponsors$,E:\FedYYC-Sponsors
+FedYYC,Urban Planning Topics,LAB-LOUIE,FedYYC-UrbanPlanningTopics$,D:\FedYYC-Urban Planning Topics
+FedYYC,Urban Planning Topics,LAB-DEWEY,FedYYC-UrbanPlanningTopics$,E:\FedYYC-Urban Planning Topics
+FedYYC,Website,LAB-LOUIE,FedYYC-Website$,D:\FedYYC-Website
+FedYYC,Website,LAB-DEWEY,FedYYC-Website$,E:\FedYYC-Website
+FedYYC,Workshops,LAB-LOUIE,FedYYC-Workshops$,D:\FedYYC-Workshops
+FedYYC,Workshops,LAB-DEWEY,FedYYC-Workshops$,E:\FedYYC-Workshops

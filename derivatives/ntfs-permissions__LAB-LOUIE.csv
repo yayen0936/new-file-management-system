@@ -1,0 +1,143 @@
+FolderPath,DomainLocalGroup,Permissions,AppliesTo
+D:\FedYYC-Action Grants,FedYYC-ActionGrants-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Action Grants,FedYYC-ActionGrants-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-ActivateYYC,FedYYC-ActivateYYC-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-ActivateYYC,FedYYC-ActivateYYC-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Annual General Meeting,FedYYC-AnnualGeneralMeeting-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Annual General Meeting,FedYYC-AnnualGeneralMeeting-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Brand Masters,FedYYC-BrandMasters-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Brand Masters,FedYYC-BrandMasters-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Communications,FedYYC-Communications-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Communications,FedYYC-Communications-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Business Directory,FedYYC-BusinessDirectory-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Business Directory,FedYYC-BusinessDirectory-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-ClimateReadyYYC,FedYYC-ClimateReadyYYC-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-ClimateReadyYYC,FedYYC-ClimateReadyYYC-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Citizens + Students,FedYYC-CitizensStudents-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Citizens + Students,FedYYC-CitizensStudents-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Consulting,FedYYC-Consulting-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Consulting,FedYYC-Consulting-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Energizing Spaces,FedYYC-EnergizingSpaces-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Energizing Spaces,FedYYC-EnergizingSpaces-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Exploring Communities,FedYYC-ExploringCommunities-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Exploring Communities,FedYYC-ExploringCommunities-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-External Committees,FedYYC-ExternalCommittees-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-External Committees,FedYYC-ExternalCommittees-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-External Committees\Board Leadership Calgary,FedYYC-ExternalCommittees-BoardLeadershipCalgary-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-External Committees\Board Leadership Calgary,FedYYC-ExternalCommittees-BoardLeadershipCalgary-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Financial Literacy,FedYYC-FinancialLiteracy-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Financial Literacy,FedYYC-FinancialLiteracy-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Forum,FedYYC-Forum-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Forum,FedYYC-Forum-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Fund Development,FedYYC-FundDevelopment-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Fund Development,FedYYC-FundDevelopment-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Fund Development\Admin,FedYYC-FundDevelopment-Admin-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Fund Development\Admin,FedYYC-FundDevelopment-Admin-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Fund Development\Grants,FedYYC-FundDevelopment-Grants-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Fund Development\Grants,FedYYC-FundDevelopment-Grants-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Fund Development\Sponsorships,FedYYC-FundDevelopment-Sponsorships-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Fund Development\Sponsorships,FedYYC-FundDevelopment-Sponsorships-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project,FedYYC-GoodPlacesProject-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project,FedYYC-GoodPlacesProject-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Admin,FedYYC-GoodPlacesProject-Admin-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Admin,FedYYC-GoodPlacesProject-Admin-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Consulting,FedYYC-GoodPlacesProject-Consulting-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Consulting,FedYYC-GoodPlacesProject-Consulting-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Demonstration Projects,FedYYC-GoodPlacesProject-DemonstrationProjects-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Demonstration Projects,FedYYC-GoodPlacesProject-DemonstrationProjects-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Grants,FedYYC-GoodPlacesProject-Grants-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Grants,FedYYC-GoodPlacesProject-Grants-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Learning Events,FedYYC-GoodPlacesProject-LearningEvents-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Learning Events,FedYYC-GoodPlacesProject-LearningEvents-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Lot,FedYYC-GoodPlacesProject-Lot-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Lot,FedYYC-GoodPlacesProject-Lot-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\PR,FedYYC-GoodPlacesProject-PR-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\PR,FedYYC-GoodPlacesProject-PR-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Reports,FedYYC-GoodPlacesProject-Reports-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Good Places Project\Reports,FedYYC-GoodPlacesProject-Reports-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Hero Awards,FedYYC-HeroAwards-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Hero Awards,FedYYC-HeroAwards-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees,FedYYC-InternalCommittees-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees,FedYYC-InternalCommittees-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Emergency & Continuity,FedYYC-InternalCommittees-EmergencyContinuity-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Emergency & Continuity,FedYYC-InternalCommittees-EmergencyContinuity-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Federation Positioning,FedYYC-InternalCommittees-FederationPositioning-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Federation Positioning,FedYYC-InternalCommittees-FederationPositioning-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Holiday Planning Committee,FedYYC-InternalCommittees-HolidayPlanningCommittee-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Holiday Planning Committee,FedYYC-InternalCommittees-HolidayPlanningCommittee-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Inclusion,FedYYC-InternalCommittees-Inclusion-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Inclusion,FedYYC-InternalCommittees-Inclusion-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Stakeholder Engagement Committee,FedYYC-InternalCommittees-StakeholderEngagementCommittee-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Stakeholder Engagement Committee,FedYYC-InternalCommittees-StakeholderEngagementCommittee-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Urban Planning Committee,FedYYC-InternalCommittees-UrbanPlanningCommittee-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Urban Planning Committee,FedYYC-InternalCommittees-UrbanPlanningCommittee-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Workplace Health Safety,FedYYC-InternalCommittees-WorkplaceHealthSafety-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Internal Committees\Workplace Health Safety,FedYYC-InternalCommittees-WorkplaceHealthSafety-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-IT,FedYYC-IT-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-IT,FedYYC-IT-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Admin,FedYYC-IT-Admin-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Admin,FedYYC-IT-Admin-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Applications,FedYYC-IT-Applications-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Applications,FedYYC-IT-Applications-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Application Management,FedYYC-IT-ApplicationManagement-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Application Management,FedYYC-IT-ApplicationManagement-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Infrastructure,FedYYC-IT-Infrastructure-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Infrastructure,FedYYC-IT-Infrastructure-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Projects,FedYYC-IT-Projects-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Projects,FedYYC-IT-Projects-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\User Management,FedYYC-IT-UserManagement-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\User Management,FedYYC-IT-UserManagement-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Support,FedYYC-IT-Support-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-IT\Support,FedYYC-IT-Support-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Jane's Walk,FedYYC-JanesWalk-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Jane's Walk,FedYYC-JanesWalk-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Lunch n Learns,FedYYC-LunchnLearns-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Lunch n Learns,FedYYC-LunchnLearns-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-March CA Awareness,FedYYC-MarchCAAwareness-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-March CA Awareness,FedYYC-MarchCAAwareness-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Membership,FedYYC-Membership-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Membership,FedYYC-Membership-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Membership\Admin,FedYYC-Membership-Admin-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Membership\Admin,FedYYC-Membership-Admin-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Membership\Members,FedYYC-Membership-Members-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Membership\Members,FedYYC-Membership-Members-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Membership\Years,FedYYC-Membership-Years-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Membership\Years,FedYYC-Membership-Years-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Member Engagement,FedYYC-MemberEngagement-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Member Engagement,FedYYC-MemberEngagement-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Member Resource Library,FedYYC-MemberResourceLibrary-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Member Resource Library,FedYYC-MemberResourceLibrary-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Milestones,FedYYC-Milestones-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Milestones,FedYYC-Milestones-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Neighbour Day,FedYYC-NeighbourDay-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Neighbour Day,FedYYC-NeighbourDay-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter,FedYYC-Newsletter-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter,FedYYC-Newsletter-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Admin,FedYYC-Newsletter-Admin-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Admin,FedYYC-Newsletter-Admin-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\CA Content,FedYYC-Newsletter-CAContent-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\CA Content,FedYYC-Newsletter-CAContent-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Get Engaged,FedYYC-Newsletter-GetEngaged-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Get Engaged,FedYYC-Newsletter-GetEngaged-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Internal,FedYYC-Newsletter-Internal-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Internal,FedYYC-Newsletter-Internal-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\NPC,FedYYC-Newsletter-NPC-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\NPC,FedYYC-Newsletter-NPC-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Peer-to-Peer,FedYYC-Newsletter-PeertoPeer-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Peer-to-Peer,FedYYC-Newsletter-PeertoPeer-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Your Moment In Planning,FedYYC-Newsletter-YourMomentInPlanning-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Newsletter\Your Moment In Planning,FedYYC-Newsletter-YourMomentInPlanning-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-One-on-One Support,FedYYC-OneonOneSupport-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-One-on-One Support,FedYYC-OneonOneSupport-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Partners In Planning,FedYYC-PartnersInPlanning-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Partners In Planning,FedYYC-PartnersInPlanning-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Social Media,FedYYC-SocialMedia-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Social Media,FedYYC-SocialMedia-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Sponsors,FedYYC-Sponsors-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Sponsors,FedYYC-Sponsors-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Urban Planning Topics,FedYYC-UrbanPlanningTopics-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Urban Planning Topics,FedYYC-UrbanPlanningTopics-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Website,FedYYC-Website-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Website,FedYYC-Website-Root-L-RW,Modify,ThisFolderSubfoldersFiles
+D:\FedYYC-Workshops,FedYYC-Workshops-Root-L-RO,ReadAndExecute,ThisFolderSubfoldersFiles
+D:\FedYYC-Workshops,FedYYC-Workshops-Root-L-RW,Modify,ThisFolderSubfoldersFiles

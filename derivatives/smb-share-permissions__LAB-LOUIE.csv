@@ -1,0 +1,71 @@
+FolderPath,ShareName,DomainLocalGroup,Permissions
+D:\FedYYC-Action Grants,FedYYC-ActionGrants$,FedYYC-ActionGrants-Root-L-RO,Read
+D:\FedYYC-Action Grants,FedYYC-ActionGrants$,FedYYC-ActionGrants-Root-L-RW,Change
+D:\FedYYC-ActivateYYC,FedYYC-ActivateYYC$,FedYYC-ActivateYYC-Root-L-RO,Read
+D:\FedYYC-ActivateYYC,FedYYC-ActivateYYC$,FedYYC-ActivateYYC-Root-L-RW,Change
+D:\FedYYC-Annual General Meeting,FedYYC-AnnualGeneralMeeting$,FedYYC-AnnualGeneralMeeting-Root-L-RO,Read
+D:\FedYYC-Annual General Meeting,FedYYC-AnnualGeneralMeeting$,FedYYC-AnnualGeneralMeeting-Root-L-RW,Change
+D:\FedYYC-Brand Masters,FedYYC-BrandMasters$,FedYYC-BrandMasters-Root-L-RO,Read
+D:\FedYYC-Brand Masters,FedYYC-BrandMasters$,FedYYC-BrandMasters-Root-L-RW,Change
+D:\FedYYC-Business Directory,FedYYC-BusinessDirectory$,FedYYC-BusinessDirectory-Root-L-RO,Read
+D:\FedYYC-Business Directory,FedYYC-BusinessDirectory$,FedYYC-BusinessDirectory-Root-L-RW,Change
+D:\FedYYC-Citizens + Students,FedYYC-CitizensStudents$,FedYYC-CitizensStudents-Root-L-RO,Read
+D:\FedYYC-Citizens + Students,FedYYC-CitizensStudents$,FedYYC-CitizensStudents-Root-L-RW,Change
+D:\FedYYC-ClimateReadyYYC,FedYYC-ClimateReadyYYC$,FedYYC-ClimateReadyYYC-Root-L-RO,Read
+D:\FedYYC-ClimateReadyYYC,FedYYC-ClimateReadyYYC$,FedYYC-ClimateReadyYYC-Root-L-RW,Change
+D:\FedYYC-Communications,FedYYC-Communications$,FedYYC-Communications-Root-L-RO,Read
+D:\FedYYC-Communications,FedYYC-Communications$,FedYYC-Communications-Root-L-RW,Change
+D:\FedYYC-Consulting,FedYYC-Consulting$,FedYYC-Consulting-Root-L-RO,Read
+D:\FedYYC-Consulting,FedYYC-Consulting$,FedYYC-Consulting-Root-L-RW,Change
+D:\FedYYC-Energizing Spaces,FedYYC-EnergizingSpaces$,FedYYC-EnergizingSpaces-Root-L-RO,Read
+D:\FedYYC-Energizing Spaces,FedYYC-EnergizingSpaces$,FedYYC-EnergizingSpaces-Root-L-RW,Change
+D:\FedYYC-Exploring Communities,FedYYC-ExploringCommunities$,FedYYC-ExploringCommunities-Root-L-RO,Read
+D:\FedYYC-Exploring Communities,FedYYC-ExploringCommunities$,FedYYC-ExploringCommunities-Root-L-RW,Change
+D:\FedYYC-External Committees,FedYYC-ExternalCommittees$,FedYYC-ExternalCommittees-Root-L-RO,Read
+D:\FedYYC-External Committees,FedYYC-ExternalCommittees$,FedYYC-ExternalCommittees-Root-L-RW,Change
+D:\FedYYC-Financial Literacy,FedYYC-FinancialLiteracy$,FedYYC-FinancialLiteracy-Root-L-RO,Read
+D:\FedYYC-Financial Literacy,FedYYC-FinancialLiteracy$,FedYYC-FinancialLiteracy-Root-L-RW,Change
+D:\FedYYC-Forum,FedYYC-Forum$,FedYYC-Forum-Root-L-RO,Read
+D:\FedYYC-Forum,FedYYC-Forum$,FedYYC-Forum-Root-L-RW,Change
+D:\FedYYC-Fund Development,FedYYC-FundDevelopment$,FedYYC-FundDevelopment-Root-L-RO,Read
+D:\FedYYC-Fund Development,FedYYC-FundDevelopment$,FedYYC-FundDevelopment-Root-L-RW,Change
+D:\FedYYC-Good Places Project,FedYYC-GoodPlacesProject$,FedYYC-GoodPlacesProject-Root-L-RO,Read
+D:\FedYYC-Good Places Project,FedYYC-GoodPlacesProject$,FedYYC-GoodPlacesProject-Root-L-RW,Change
+D:\FedYYC-Hero Awards,FedYYC-HeroAwards$,FedYYC-HeroAwards-Root-L-RO,Read
+D:\FedYYC-Hero Awards,FedYYC-HeroAwards$,FedYYC-HeroAwards-Root-L-RW,Change
+D:\FedYYC-IT,FedYYC-IT$,FedYYC-IT-Root-L-RO,Read
+D:\FedYYC-IT,FedYYC-IT$,FedYYC-IT-Root-L-RW,Change
+D:\FedYYC-Internal Committees,FedYYC-InternalCommittees$,FedYYC-InternalCommittees-Root-L-RO,Read
+D:\FedYYC-Internal Committees,FedYYC-InternalCommittees$,FedYYC-InternalCommittees-Root-L-RW,Change
+D:\FedYYC-Jane's Walk,FedYYC-JanesWalk$,FedYYC-JanesWalk-Root-L-RO,Read
+D:\FedYYC-Jane's Walk,FedYYC-JanesWalk$,FedYYC-JanesWalk-Root-L-RW,Change
+D:\FedYYC-Lunch n Learns,FedYYC-LunchnLearns$,FedYYC-LunchnLearns-Root-L-RO,Read
+D:\FedYYC-Lunch n Learns,FedYYC-LunchnLearns$,FedYYC-LunchnLearns-Root-L-RW,Change
+D:\FedYYC-March CA Awareness,FedYYC-MarchCAAwareness$,FedYYC-MarchCAAwareness-Root-L-RO,Read
+D:\FedYYC-March CA Awareness,FedYYC-MarchCAAwareness$,FedYYC-MarchCAAwareness-Root-L-RW,Change
+D:\FedYYC-Member Engagement,FedYYC-MemberEngagement$,FedYYC-MemberEngagement-Root-L-RO,Read
+D:\FedYYC-Member Engagement,FedYYC-MemberEngagement$,FedYYC-MemberEngagement-Root-L-RW,Change
+D:\FedYYC-Member Resource Library,FedYYC-MemberResourceLibrary$,FedYYC-MemberResourceLibrary-Root-L-RO,Read
+D:\FedYYC-Member Resource Library,FedYYC-MemberResourceLibrary$,FedYYC-MemberResourceLibrary-Root-L-RW,Change
+D:\FedYYC-Membership,FedYYC-Membership$,FedYYC-Membership-Root-L-RO,Read
+D:\FedYYC-Membership,FedYYC-Membership$,FedYYC-Membership-Root-L-RW,Change
+D:\FedYYC-Milestones,FedYYC-Milestones$,FedYYC-Milestones-Root-L-RO,Read
+D:\FedYYC-Milestones,FedYYC-Milestones$,FedYYC-Milestones-Root-L-RW,Change
+D:\FedYYC-Neighbour Day,FedYYC-NeighbourDay$,FedYYC-NeighbourDay-Root-L-RO,Read
+D:\FedYYC-Neighbour Day,FedYYC-NeighbourDay$,FedYYC-NeighbourDay-Root-L-RW,Change
+D:\FedYYC-Newsletter,FedYYC-Newsletter$,FedYYC-Newsletter-Root-L-RO,Read
+D:\FedYYC-Newsletter,FedYYC-Newsletter$,FedYYC-Newsletter-Root-L-RW,Change
+D:\FedYYC-One-on-One Support,FedYYC-OneonOneSupport$,FedYYC-OneonOneSupport-Root-L-RO,Read
+D:\FedYYC-One-on-One Support,FedYYC-OneonOneSupport$,FedYYC-OneonOneSupport-Root-L-RW,Change
+D:\FedYYC-Partners In Planning,FedYYC-PartnersInPlanning$,FedYYC-PartnersInPlanning-Root-L-RO,Read
+D:\FedYYC-Partners In Planning,FedYYC-PartnersInPlanning$,FedYYC-PartnersInPlanning-Root-L-RW,Change
+D:\FedYYC-Social Media,FedYYC-SocialMedia$,FedYYC-SocialMedia-Root-L-RO,Read
+D:\FedYYC-Social Media,FedYYC-SocialMedia$,FedYYC-SocialMedia-Root-L-RW,Change
+D:\FedYYC-Sponsors,FedYYC-Sponsors$,FedYYC-Sponsors-Root-L-RO,Read
+D:\FedYYC-Sponsors,FedYYC-Sponsors$,FedYYC-Sponsors-Root-L-RW,Change
+D:\FedYYC-Urban Planning Topics,FedYYC-UrbanPlanningTopics$,FedYYC-UrbanPlanningTopics-Root-L-RO,Read
+D:\FedYYC-Urban Planning Topics,FedYYC-UrbanPlanningTopics$,FedYYC-UrbanPlanningTopics-Root-L-RW,Change
+D:\FedYYC-Website,FedYYC-Website$,FedYYC-Website-Root-L-RO,Read
+D:\FedYYC-Website,FedYYC-Website$,FedYYC-Website-Root-L-RW,Change
+D:\FedYYC-Workshops,FedYYC-Workshops$,FedYYC-Workshops-Root-L-RO,Read
+D:\FedYYC-Workshops,FedYYC-Workshops$,FedYYC-Workshops-Root-L-RW,Change
