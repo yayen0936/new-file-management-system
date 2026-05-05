@@ -14,12 +14,13 @@ function Show-Menu {
     Write-Host "3. Apply NTFS Permissions" -ForegroundColor White
     Write-Host "4. Apply SMB Share Permissions" -ForegroundColor White
     Write-Host "5. Configure DFS Namespace and Replication" -ForegroundColor White
-    Write-Host "6. Exit" -ForegroundColor White
+    Write-Host "6. Reconcile Group Membership" -ForegroundColor White
+    Write-Host "7. Exit" -ForegroundColor White
     Write-Host "=============================================" -ForegroundColor White
 }
 
 # -------------------------------
-# Function: Generate CSV File
+# 1. Generate CSV File
 # -------------------------------
 function Run-GenerateCSV {
     Write-Host "`n[+] Running CSV generation locally..." -ForegroundColor DarkGray
@@ -70,7 +71,7 @@ function Run-GenerateCSV {
 }
 
 # -------------------------------
-# Function: Create AD Domain Local Groups
+# 2. Create AD Domain Local Groups
 # -------------------------------
 function Run-DomainLocal {
     Write-Host "`n[+] Executing AD Domain Local Groups provisioning..." -ForegroundColor DarkGray
@@ -84,7 +85,7 @@ function Run-DomainLocal {
 }
 
 # -------------------------------
-# Function: Create Folder and Apply NTFS Permissions
+# 3. Create Folder and Apply NTFS Permissions
 # -------------------------------
 function Run-NTFS {
     Write-Host "`n[+] Applying NTFS permissions..." -ForegroundColor DarkGray
@@ -98,7 +99,7 @@ function Run-NTFS {
 }
 
 # -------------------------------
-# Function: Share Folder and Apply SMB Share Permissions
+# 4. Share Folder and Apply SMB Share Permissions
 # -------------------------------
 function Run-SMB {
     Write-Host "`n[+] Applying SMB share permissions..." -ForegroundColor DarkGray
@@ -112,7 +113,7 @@ function Run-SMB {
 }
 
 # -------------------------------
-# Function: Configure DFS Namespace and Replication
+# 5. Configure DFS Namespace and Replication
 # -------------------------------
 function Run-DFS {
     Write-Host "`n[+] Configuring DFS Namespace and Replication..." -ForegroundColor DarkGray
@@ -126,7 +127,30 @@ function Run-DFS {
 }
 
 # -------------------------------
-# Function: Close Program
+# 6. Reconcile Group Membership
+# -------------------------------
+function Run-GroupMembershipReconciliation {
+    Write-Host "`n[+] Reconciling the expected Global Group membership from CSV against the actual Global Group membership inside each Domain Local Group in AD..." -ForegroundColor DarkGray
+    try {
+        $repoRoot = $PSScriptRoot
+        $script = Join-Path $repoRoot "submodules\ad-security-groups\group-membership\validate-DomainLocal-Members.ps1"
+
+        if (-not (Test-Path $script)) {
+            Write-Host "[!] Membership reconciliation script not found: $script" -ForegroundColor Red
+            return
+        }
+
+        & $script
+        Write-Host "Group membership reconciliation completed." -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Error reconciling group membership: $_" -ForegroundColor Red
+    }
+    Pause
+}
+
+# -------------------------------
+# 7. Close Program
 # -------------------------------
 function Exit-Script {
     Write-Host "`nExiting the orchestrator...`n" -ForegroundColor DarkGray
@@ -142,7 +166,7 @@ $Cred = Get-Credential -Message "Enter domain admin credentials"
 
 do {
     Show-Menu
-    $choice = Read-Host "Select an option (1-6)"
+    $choice = Read-Host "Select an option (1-7)"
 
     switch ($choice) {
         1 { Run-GenerateCSV }
@@ -150,9 +174,10 @@ do {
         3 { Run-NTFS }
         4 { Run-SMB }
         5 { Run-DFS }
-        6 { Exit-Script }
+        6 { Run-GroupMembershipReconciliation }
+        7 { Exit-Script }
         default {
-            Write-Host "Invalid selection. Please choose a valid option (1-6)."
+            Write-Host "Invalid selection. Please choose a valid option (1-7)."
             Pause
         }
     }
