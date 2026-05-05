@@ -8,7 +8,7 @@ FedYYC-AnnualGeneralMeeting-Root-L-RW,Read/Write access for Annual General Meeti
 FedYYC-BrandMasters-Root-L-RO,Read-only access for Brand Masters Root Folder,Resources,
 FedYYC-BrandMasters-Root-L-RW,Read/Write access for Brand Masters Root Folder,Resources,Executive Director; Communications Generalist; Design Desk
 FedYYC-Communications-Root-L-RO,Read-only access for Communications Root Folder,Resources,
-FedYYC-Communications-Root-L-RW,Read/Write access for Communications Root Folder,Resources,Executive Director; Communications Generalist; Manager Placemaking
+FedYYC-Communications-Root-L-RW,Read/Write access for Communications Root Folder,Resources,Executive Director; Communications Generalist
 FedYYC-BusinessDirectory-Root-L-RO,Read-only access for Business Directory Root Folder,Resources,
 FedYYC-BusinessDirectory-Root-L-RW,Read/Write access for Business Directory Root Folder,Resources,Executive Director; Director of Education; Engagement & Support Coordinator; Communications Generalist; Data and Program Assistant
 FedYYC-ClimateReadyYYC-Root-L-RO,Read-only access for ClimateReadyYYC Root Folder,Resources,
