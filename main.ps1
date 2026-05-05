@@ -14,9 +14,8 @@ function Show-Menu {
     Write-Host "3. Apply NTFS Permissions" -ForegroundColor White
     Write-Host "4. Apply SMB Share Permissions" -ForegroundColor White
     Write-Host "5. Configure DFS Namespace and Replication" -ForegroundColor White
-    Write-Host "6. Run Full Orchestration (One-Click)" -ForegroundColor White
-    Write-Host "7. Group Membership Assignment" -ForegroundColor White
-    Write-Host "8. Exit" -ForegroundColor White
+    Write-Host "6. Group Membership Assignment" -ForegroundColor White
+    Write-Host "7. Exit" -ForegroundColor White
     Write-Host "=============================================" -ForegroundColor White
 }
 
@@ -128,39 +127,6 @@ function Run-DFS {
 }
 
 # -------------------------------
-# Function: Run Full Orchestration (One-Click)
-# -------------------------------
-function Run-FullOrchestration {
-    Write-Host "`n[+] Starting full orchestration process..." -ForegroundColor DarkGray
-    try {
-        Write-Host "`n--- Step 1: Generate CSV Files ---" -ForegroundColor White
-        Run-GenerateCSV
-        Write-Host "CSV generation completed successfully!" -ForegroundColor Green
-
-        Write-Host "`n--- Step 2: Create AD Domain Local Groups ---" -ForegroundColor White
-        Run-DomainLocal
-        Write-Host "AD Domain Local Groups created successfully!" -ForegroundColor Green
-
-        Write-Host "`n--- Step 3: Apply NTFS Permissions ---" -ForegroundColor White
-        Run-NTFS
-        Write-Host "NTFS permissions applied successfully!" -ForegroundColor Green
-
-        Write-Host "`n--- Step 4: Apply SMB Share Permissions ---" -ForegroundColor White
-        Run-SMB
-        Write-Host "SMB share permissions applied successfully!" -ForegroundColor Green
-
-        Write-Host "`n--- Step 5: Configure DFS Namespace and Replication ---" -ForegroundColor White
-        Run-DFS
-
-        Write-Host "DFS Namespace and Replication configured successfully!" -ForegroundColor Green
-        Write-Host "`nFull orchestration completed successfully!" -ForegroundColor Green
-    } catch {
-        Write-Host "Error during full orchestration: $_" -ForegroundColor Red
-    }
-    Pause
-}
-
-# -------------------------------
 # Function: Group Membership Assignment
 # -------------------------------
 function Run-GroupMembership {
@@ -191,7 +157,7 @@ $Cred = Get-Credential -Message "Enter domain admin credentials"
 
 do {
     Show-Menu
-    $choice = Read-Host "Select an option (1-8)"
+    $choice = Read-Host "Select an option (1-7)"
 
     switch ($choice) {
         1 { Run-GenerateCSV }
@@ -199,11 +165,10 @@ do {
         3 { Run-NTFS }
         4 { Run-SMB }
         5 { Run-DFS }
-        6 { Run-FullOrchestration }
-        7 { Run-GroupMembership }
-        8 { Exit-Script }
+        6 { Run-GroupMembership }
+        7 { Exit-Script }
         default {
-            Write-Host "Invalid selection. Please choose a valid option (1-8)."
+            Write-Host "Invalid selection. Please choose a valid option (1-7)."
             Pause
         }
     }
