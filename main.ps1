@@ -14,7 +14,7 @@ function Show-Menu {
     Write-Host "3. Apply NTFS Permissions" -ForegroundColor White
     Write-Host "4. Apply SMB Share Permissions" -ForegroundColor White
     Write-Host "5. Configure DFS Namespace and Replication" -ForegroundColor White
-    Write-Host "6. Reconcile Group Membership" -ForegroundColor White
+    Write-Host "6. Reconcile Domain Local Group Members" -ForegroundColor White
     Write-Host "7. Exit" -ForegroundColor White
     Write-Host "=============================================" -ForegroundColor White
 }
@@ -127,24 +127,24 @@ function Run-DFS {
 }
 
 # -------------------------------
-# 6. Reconcile Group Membership
+# 6. Reconcile Domain Local Group Members
 # -------------------------------
-function Run-GroupMembershipReconciliation {
-    Write-Host "`n[+] Reconciling the expected Global Group membership from CSV against the actual Global Group membership inside each Domain Local Group in AD..." -ForegroundColor DarkGray
+function Run-DLGMembersReconciliation {
+    Write-Host "`n[+] Reconciling the Global Group membership from CSV source of truth against the actual Global Group membership inside each Domain Local Group in AD..." -ForegroundColor DarkGray
     try {
         $repoRoot = $PSScriptRoot
         $script = Join-Path $repoRoot "submodules\ad-security-groups\group-membership\validate-DomainLocal-Members.ps1"
 
         if (-not (Test-Path $script)) {
-            Write-Host "[!] Membership reconciliation script not found: $script" -ForegroundColor Red
+            Write-Host "[!] Domain Local group members reconciliation script not found: $script" -ForegroundColor Red
             return
         }
 
         & $script
-        Write-Host "Group membership reconciliation completed." -ForegroundColor Green
+        Write-Host "Domain Local group members reconciliation completed." -ForegroundColor Green
     }
     catch {
-        Write-Host "Error reconciling group membership: $_" -ForegroundColor Red
+        Write-Host "Error reconciling Domain Local group members: $_" -ForegroundColor Red
     }
     Pause
 }
@@ -174,7 +174,7 @@ do {
         3 { Run-NTFS }
         4 { Run-SMB }
         5 { Run-DFS }
-        6 { Run-GroupMembershipReconciliation }
+        6 { Run-DLGMembersReconciliation }
         7 { Exit-Script }
         default {
             Write-Host "Invalid selection. Please choose a valid option (1-7)."
