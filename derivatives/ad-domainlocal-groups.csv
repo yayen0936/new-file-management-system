@@ -8,7 +8,7 @@ FedYYC-AnnualGeneralMeeting-Root-L-RW,Read/Write access for Annual General Meeti
 FedYYC-BrandMasters-Root-L-RO,Read-only access for Brand Masters Root Folder,Resources,
 FedYYC-BrandMasters-Root-L-RW,Read/Write access for Brand Masters Root Folder,Resources,Executive Director; Communications Generalist; Design Desk
 FedYYC-Communications-Root-L-RO,Read-only access for Communications Root Folder,Resources,
-FedYYC-Communications-Root-L-RW,Read/Write access for Communications Root Folder,Resources,Executive Director; Communications Generalist
+FedYYC-Communications-Root-L-RW,Read/Write access for Communications Root Folder,Resources,Executive Director; Communications Generalist; Manager Placemaking
 FedYYC-BusinessDirectory-Root-L-RO,Read-only access for Business Directory Root Folder,Resources,
 FedYYC-BusinessDirectory-Root-L-RW,Read/Write access for Business Directory Root Folder,Resources,Executive Director; Director of Education; Engagement & Support Coordinator; Communications Generalist; Data and Program Assistant
 FedYYC-ClimateReadyYYC-Root-L-RO,Read-only access for ClimateReadyYYC Root Folder,Resources,
@@ -25,8 +25,6 @@ FedYYC-ExternalCommittees-Root-L-RO,Read-only access for External Committees Roo
 FedYYC-ExternalCommittees-Root-L-RW,Read/Write access for External Committees Root Folder,Resources,
 FedYYC-ExternalCommittees-BoardLeadershipCalgary-L-RO,Read-only access for External Committees Board Leadership Calgary SubFolder,Resources,
 FedYYC-ExternalCommittees-BoardLeadershipCalgary-L-RW,Read/Write access for External Committees Board Leadership Calgary SubFolder,Resources,Executive Director; Director of Education; Engagement & Support Coordinator
-FedYYC-ExternalCommittees-TestCommittee-L-RO,Read-only access for External Committees Test Committee SubFolder,Resources,
-FedYYC-ExternalCommittees-TestCommittee-L-RW,Read/Write access for External Committees Test Committee SubFolder,Resources,Executive Director; Director of Education; Engagement & Support Coordinator
 FedYYC-FinancialLiteracy-Root-L-RO,Read-only access for Financial Literacy Root Folder,Resources,
 FedYYC-FinancialLiteracy-Root-L-RW,Read/Write access for Financial Literacy Root Folder,Resources,Executive Director; Director of Education; Director Financial Literacy; Engagement & Support Coordinator; Community Grant Implementer; Design Desk; Grants Administrator; Capacity Builder
 FedYYC-Forum-Root-L-RO,Read-only access for Forum Root Folder,Resources,
@@ -69,8 +67,6 @@ FedYYC-InternalCommittees-HolidayPlanningCommittee-L-RO,Read-only access for Int
 FedYYC-InternalCommittees-HolidayPlanningCommittee-L-RW,Read/Write access for Internal Committees Holiday Planning Committee SubFolder,Resources,Executive Director; Internal Holiday Planning Committee
 FedYYC-InternalCommittees-Inclusion-L-RO,Read-only access for Internal Committees Inclusion SubFolder,Resources,
 FedYYC-InternalCommittees-Inclusion-L-RW,Read/Write access for Internal Committees Inclusion SubFolder,Resources,Executive Director; Inclusion Committee
-FedYYC-InternalCommittees-OrganizationCultureEDIB-L-RO,Read-only access for Internal Committees Organization Culture & EDIB SubFolder,Resources,
-FedYYC-InternalCommittees-OrganizationCultureEDIB-L-RW,Read/Write access for Internal Committees Organization Culture & EDIB SubFolder,Resources,Executive Director; Director of Education; Community Grant Implementer; Capacity Builder
 FedYYC-InternalCommittees-StakeholderEngagementCommittee-L-RO,Read-only access for Internal Committees Stakeholder Engagement Committee SubFolder,Resources,
 FedYYC-InternalCommittees-StakeholderEngagementCommittee-L-RW,Read/Write access for Internal Committees Stakeholder Engagement Committee SubFolder,Resources,Executive Director; Bookkeeper; Communications Generalist; Placemaking Communications & Marketing Coordinator
 FedYYC-InternalCommittees-UrbanPlanningCommittee-L-RO,Read-only access for Internal Committees Urban Planning Committee SubFolder,Resources,
