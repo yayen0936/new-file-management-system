@@ -14,8 +14,7 @@ function Show-Menu {
     Write-Host "3. Apply NTFS Permissions" -ForegroundColor White
     Write-Host "4. Apply SMB Share Permissions" -ForegroundColor White
     Write-Host "5. Configure DFS Namespace and Replication" -ForegroundColor White
-    Write-Host "6. Group Membership Assignment" -ForegroundColor White
-    Write-Host "7. Exit" -ForegroundColor White
+    Write-Host "6. Exit" -ForegroundColor White
     Write-Host "=============================================" -ForegroundColor White
 }
 
@@ -127,20 +126,6 @@ function Run-DFS {
 }
 
 # -------------------------------
-# Function: Group Membership Assignment
-# -------------------------------
-function Run-GroupMembership {
-    Write-Host "`n[+] Opening Group Membership Assignment menu..." -ForegroundColor DarkGray
-    try {
-        .\run-GroupMembership.ps1 -Cred $Cred -Verbose
-    }
-    catch {
-        Write-Host "Error running Group Membership Assignment menu: $_" -ForegroundColor Red
-    }
-    # Pause
-}
-
-# -------------------------------
 # Function: Close Program
 # -------------------------------
 function Exit-Script {
@@ -157,7 +142,7 @@ $Cred = Get-Credential -Message "Enter domain admin credentials"
 
 do {
     Show-Menu
-    $choice = Read-Host "Select an option (1-7)"
+    $choice = Read-Host "Select an option (1-6)"
 
     switch ($choice) {
         1 { Run-GenerateCSV }
@@ -165,10 +150,9 @@ do {
         3 { Run-NTFS }
         4 { Run-SMB }
         5 { Run-DFS }
-        6 { Run-GroupMembership }
-        7 { Exit-Script }
+        6 { Exit-Script }
         default {
-            Write-Host "Invalid selection. Please choose a valid option (1-7)."
+            Write-Host "Invalid selection. Please choose a valid option (1-6)."
             Pause
         }
     }
