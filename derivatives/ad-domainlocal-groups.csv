@@ -90,7 +90,7 @@ FedYYC-IT-UserManagement-L-RW,Read/Write access for IT User Management SubFolder
 FedYYC-IT-Support-L-RO,Read-only access for IT Support SubFolder,Resources,
 FedYYC-IT-Support-L-RW,Read/Write access for IT Support SubFolder,Resources,Executive Director; IT and Data Management Specialist; Office Coordinator; Data and Program Assistant; Forum Coordinator; Server Coordinator
 FedYYC-JanesWalk-Root-L-RO,Read-only access for Jane's Walk Root Folder,Resources,
-FedYYC-JanesWalk-Root-L-RW,Read/Write access for Jane's Walk Root Folder,Resources,Executive Director; Communications Generalist; Community Grant Implementer; Design Desk; Manager Placemaking; Placemaking Communications & Marketing Coordinator; Grants Administrator; Capacity Builder
+FedYYC-JanesWalk-Root-L-RW,Read/Write access for Jane's Walk Root Folder,Resources,Executive Director; Communications Generalist; Data and Program Assistant; Community Grant Implementer; Design Desk; Manager Placemaking; Placemaking Communications & Marketing Coordinator; Grants Administrator; Capacity Builder
 FedYYC-LunchnLearns-Root-L-RO,Read-only access for Lunch n Learns Root Folder,Resources,
 FedYYC-LunchnLearns-Root-L-RW,Read/Write access for Lunch n Learns Root Folder,Resources,Executive Director; Office Coordinator; Director of Education; Director Financial Literacy; Engagement & Support Coordinator; Communications Generalist; Data and Program Assistant; Urban Planner; Community Grant Implementer; Design Desk; Manager Placemaking; Placemaking Communications & Marketing Coordinator; Grants Administrator; Capacity Builder; Auditor; Audit Technician; Audit File Coordinator
 FedYYC-MarchCAAwareness-Root-L-RO,Read-only access for March CA Awareness Root Folder,Resources,
