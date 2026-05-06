@@ -141,6 +141,7 @@ function Run-DLGMembersReconciliation {
         }
 
         & $script
+        Write-Host ""
         Write-Host "Domain Local group members reconciliation completed." -ForegroundColor Green
     }
     catch {
