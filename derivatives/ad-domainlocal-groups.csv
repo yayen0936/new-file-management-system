@@ -25,6 +25,8 @@ FedYYC-ExternalCommittees-Root-L-RO,Read-only access for External Committees Roo
 FedYYC-ExternalCommittees-Root-L-RW,Read/Write access for External Committees Root Folder,Resources,
 FedYYC-ExternalCommittees-BoardLeadershipCalgary-L-RO,Read-only access for External Committees Board Leadership Calgary SubFolder,Resources,
 FedYYC-ExternalCommittees-BoardLeadershipCalgary-L-RW,Read/Write access for External Committees Board Leadership Calgary SubFolder,Resources,Executive Director; Director of Education; Engagement & Support Coordinator
+FedYYC-ExternalCommittees-PIP-L-RO,Read-only access for External Committees PIP SubFolder,Resources,
+FedYYC-ExternalCommittees-PIP-L-RW,Read/Write access for External Committees PIP SubFolder,Resources,Executive Director; Director of Education; Engagement & Support Coordinator
 FedYYC-FinancialLiteracy-Root-L-RO,Read-only access for Financial Literacy Root Folder,Resources,
 FedYYC-FinancialLiteracy-Root-L-RW,Read/Write access for Financial Literacy Root Folder,Resources,Executive Director; Director of Education; Director Financial Literacy; Engagement & Support Coordinator; Community Grant Implementer; Design Desk; Grants Administrator; Capacity Builder
 FedYYC-Forum-Root-L-RO,Read-only access for Forum Root Folder,Resources,
@@ -139,3 +141,5 @@ FedYYC-Website-Root-L-RO,Read-only access for Website Root Folder,Resources,
 FedYYC-Website-Root-L-RW,Read/Write access for Website Root Folder,Resources,Executive Director; IT and Data Management Specialist; Office Coordinator; Communications Generalist; Urban Planner; Community Grant Implementer; Design Desk; Placemaking Communications & Marketing Coordinator
 FedYYC-Workshops-Root-L-RO,Read-only access for Workshops Root Folder,Resources,
 FedYYC-Workshops-Root-L-RW,Read/Write access for Workshops Root Folder,Resources,Executive Director; Office Coordinator; Director of Education; Director Financial Literacy; Engagement & Support Coordinator; Communications Generalist; Data and Program Assistant; Urban Planner; Community Grant Implementer; Design Desk; Manager Placemaking; Placemaking Communications & Marketing Coordinator; Grants Administrator; Capacity Builder; Auditor; Audit Technician; Audit File Coordinator
+FedYYC-NewFolder-Root-L-RO,Read-only access for NewFolder Root Folder,Resources,
+FedYYC-NewFolder-Root-L-RW,Read/Write access for NewFolder Root Folder,Resources,Executive Director; IT and Data Management Specialist; Office Coordinator; Director of Education; Director Financial Literacy; Engagement & Support Coordinator; Communications Generalist; Data and Program Assistant; Urban Planner; Community Grant Implementer; Design Desk; Manager Placemaking; Placemaking Communications & Marketing Coordinator; Grants Administrator; Capacity Builder; Auditor; Audit Technician; Audit File Coordinator
