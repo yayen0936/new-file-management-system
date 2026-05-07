@@ -131,22 +131,16 @@ function Run-DFS {
 # -------------------------------
 function Run-DomainLocal-Members {
     Write-Host "`n[+] Reconciling the Global Group membership from CSV source of truth against the actual Global Group membership inside each Domain Local Group in AD..." -ForegroundColor DarkGray
+    
     try {
-        $repoRoot = $PSScriptRoot
-        $script = Join-Path $repoRoot "submodules\ad-security-groups\Reconcile-DomainLocal-Members.ps1"
-
-        if (-not (Test-Path $script)) {
-            Write-Host "[!] Domain Local group members reconciliation script not found: $script" -ForegroundColor Red
-            return
-        }
-
-        & $script
+        .\run-DomainLocal-Members.ps1 -Cred $Cred -Verbose
         Write-Host ""
-        Write-Host "Domain Local group members reconciliation completed." -ForegroundColor Green
+        Write-Host "Domain Local group members reconciliation check completed." -ForegroundColor Green
     }
     catch {
         Write-Host "Error reconciling Domain Local group members: $_" -ForegroundColor Red
     }
+
     Pause
 }
 
