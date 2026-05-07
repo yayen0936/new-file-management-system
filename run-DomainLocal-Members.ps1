@@ -71,12 +71,14 @@ try {
 
         Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 
-        & $ScriptPath -CsvPath $CsvPath
+        & $ScriptPath -CsvPath $CsvPath 6>&1
 
     } -ArgumentList $TempPath 2>&1 | Tee-Object -FilePath $logFile
 
+    Write-Host ""
     Write-Host "=== Domain Local Group members reconciliation completed on $PrimaryDC ===" -ForegroundColor Green
     Write-Host "Audit log saved to: $logFile" -ForegroundColor DarkGray
+    Write-Host ""
 }
 catch {
     Write-Host "Error running Domain Local Group members reconciliation on ${PrimaryDC}: $($_.Exception.Message)" -ForegroundColor Red
