@@ -134,8 +134,6 @@ function Run-DomainLocal-Members {
     
     try {
         .\run-DomainLocal-Members.ps1 -Cred $Cred -Verbose
-        Write-Host ""
-        Write-Host "Domain Local group members reconciliation check completed." -ForegroundColor Green
     }
     catch {
         Write-Host "Error reconciling Domain Local group members: $_" -ForegroundColor Red
