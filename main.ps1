@@ -7,7 +7,7 @@ try {
 function Show-Menu {
     Clear-Host
     Write-Host "=============================================" -ForegroundColor White
-    Write-Host "   FILE MANAGEMENT SYSTEM - MAIN MENU" -ForegroundColor White
+    Write-Host "           FILE MANAGEMENT SYSTEM            " -ForegroundColor White
     Write-Host "=============================================" -ForegroundColor White
     Write-Host "1. Generate CSV File" -ForegroundColor White
     Write-Host "2. Create AD Domain Local Groups" -ForegroundColor White
@@ -129,11 +129,11 @@ function Run-DFS {
 # -------------------------------
 # 6. Reconcile Domain Local Group Members
 # -------------------------------
-function Run-DLGMembersReconciliation {
+function Run-DomainLocal-Members {
     Write-Host "`n[+] Reconciling the Global Group membership from CSV source of truth against the actual Global Group membership inside each Domain Local Group in AD..." -ForegroundColor DarkGray
     try {
         $repoRoot = $PSScriptRoot
-        $script = Join-Path $repoRoot "submodules\ad-security-groups\group-membership\reconcile-DomainLocal-Members.ps1"
+        $script = Join-Path $repoRoot "submodules\ad-security-groups\Reconcile-DomainLocal-Members.ps1"
 
         if (-not (Test-Path $script)) {
             Write-Host "[!] Domain Local group members reconciliation script not found: $script" -ForegroundColor Red
@@ -175,7 +175,7 @@ do {
         3 { Run-NTFS }
         4 { Run-SMB }
         5 { Run-DFS }
-        6 { Run-DLGMembersReconciliation }
+        6 { Run-DomainLocal-Members }
         7 { Exit-Script }
         default {
             Write-Host "Invalid selection. Please choose a valid option (1-7)."
