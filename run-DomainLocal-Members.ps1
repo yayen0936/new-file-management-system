@@ -40,7 +40,7 @@ $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
 $logFile = Join-Path $auditDir "domainlocal-members-reconciliation__$PrimaryDC__$timestamp.log"
 
 Write-Host ""
-Write-Host "=== Starting Domain Local Group members reconciliation on $PrimaryDC ===" -ForegroundColor Cyan
+Write-Host "Starting Domain Local Group members reconciliation on $PrimaryDC" -ForegroundColor DarkGray
 
 $Session = $null
 
@@ -76,7 +76,7 @@ try {
     } -ArgumentList $TempPath 2>&1 | Tee-Object -FilePath $logFile
 
     Write-Host ""
-    Write-Host "=== Domain Local Group members reconciliation completed on $PrimaryDC ===" -ForegroundColor Green
+    Write-Host "Domain Local Group members reconciliation completed on $PrimaryDC" -ForegroundColor Green
     Write-Host "Audit log saved to: $logFile" -ForegroundColor DarkGray
     Write-Host ""
 }
