@@ -15,7 +15,8 @@ function Show-Menu {
     Write-Host "4. Apply SMB Share Permissions" -ForegroundColor White
     Write-Host "5. Configure DFS Namespace and Replication" -ForegroundColor White
     Write-Host "6. Reconcile Domain Local Group Members" -ForegroundColor White
-    Write-Host "7. Exit" -ForegroundColor White
+    Write-Host "7. Normalize NTFS Child Permissions" -ForegroundColor White
+    Write-Host "8. Exit" -ForegroundColor White
     Write-Host "=============================================" -ForegroundColor White
 }
 
@@ -143,7 +144,24 @@ function Run-DomainLocal-Members {
 }
 
 # -------------------------------
-# 7. Close Program
+# 7. Normalize NTFS Child Permissions
+# -------------------------------
+function Run-NTFS-Normalization {
+    Write-Host "`n[+] Normalizing NTFS child permissions..." -ForegroundColor DarkGray
+
+    try {
+        .\run-NTFS-Normalization.ps1 -Cred $Cred -Verbose
+        Write-Host "NTFS child permissions normalization completed." -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Error normalizing NTFS child permissions: $_" -ForegroundColor Red
+    }
+
+    Pause
+}
+
+# -------------------------------
+# 8. Close Program
 # -------------------------------
 function Exit-Script {
     Write-Host "`nExiting the orchestrator...`n" -ForegroundColor DarkGray
@@ -159,7 +177,7 @@ $Cred = Get-Credential -Message "Enter domain admin credentials"
 
 do {
     Show-Menu
-    $choice = Read-Host "Select an option (1-7)"
+    $choice = Read-Host "Select an option (1-8)"
 
     switch ($choice) {
         1 { Run-GenerateCSV }
@@ -168,9 +186,10 @@ do {
         4 { Run-SMB }
         5 { Run-DFS }
         6 { Run-DomainLocal-Members }
-        7 { Exit-Script }
+        7 { Run-NTFS-Normalization }
+        8 { Exit-Script }
         default {
-            Write-Host "Invalid selection. Please choose a valid option (1-7)."
+            Write-Host "Invalid selection. Please choose a valid option (1-8)."
             Pause
         }
     }
