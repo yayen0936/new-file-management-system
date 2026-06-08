@@ -36,7 +36,7 @@ foreach ($Server in $fileServers) {
     $logFile = Join-Path $logsDir ("ntfs-normalization__{0}__{1}.log" -f $Server, $timestamp)
 
     try {
-        $Session = New-PSSession -ComputerName "${Server}.ad.calgarycommunities.com" -Credential $Cred
+        $Session = New-PSSession -ComputerName "${Server}.ad.itsummerlab.local" -Credential $Cred
 
         # Ensure C:\Temp exists on remote server
         Invoke-Command -Session $Session -ScriptBlock {
