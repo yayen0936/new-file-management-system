@@ -16,7 +16,8 @@ function Show-Menu {
     Write-Host "5. Configure DFS Namespace and Replication" -ForegroundColor White
     Write-Host "6. Reconcile Domain Local Group Members" -ForegroundColor White
     Write-Host "7. Normalize NTFS Child Permissions" -ForegroundColor White
-    Write-Host "8. Exit" -ForegroundColor White
+    Write-Host "8. Set DFS Referral target priority" -ForegroundColor White
+    Write-Host "9. Exit" -ForegroundColor White
     Write-Host "=============================================" -ForegroundColor White
 }
 
@@ -161,7 +162,24 @@ function Run-NTFS-Normalization {
 }
 
 # -------------------------------
-# 8. Close Program
+# 8. Set DFS Referral Target Priority
+# -------------------------------
+function Run-DFS-Referral {
+    Write-Host "`n[+] Setting DFS referral target priority..." -ForegroundColor DarkGray
+
+    try {
+        .\run-DFS-Referral.ps1 -Cred $Cred -Verbose
+        Write-Host "DFS referral target priority configured successfully!" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Error setting DFS referral target priority: $_" -ForegroundColor Red
+    }
+
+    Pause
+}
+
+# -------------------------------
+# 9. Close Program
 # -------------------------------
 function Exit-Script {
     Write-Host "`nExiting the orchestrator...`n" -ForegroundColor DarkGray
@@ -177,7 +195,7 @@ $Cred = Get-Credential -Message "Enter domain admin credentials"
 
 do {
     Show-Menu
-    $choice = Read-Host "Select an option (1-8)"
+    $choice = Read-Host "Select an option (1-9)"
 
     switch ($choice) {
         1 { Run-GenerateCSV }
@@ -187,9 +205,10 @@ do {
         5 { Run-DFS }
         6 { Run-DomainLocal-Members }
         7 { Run-NTFS-Normalization }
-        8 { Exit-Script }
+        8 { Run-DFS-Referral }
+        9 { Exit-Script }
         default {
-            Write-Host "Invalid selection. Please choose a valid option (1-8)."
+            Write-Host "Invalid selection. Please choose a valid option (1-9)."
             Pause
         }
     }
