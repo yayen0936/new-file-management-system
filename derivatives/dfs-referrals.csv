@@ -1,3 +1,69 @@
-﻿Namespace,Folder,Server,SMBShare,PriorityOrder,EnableTargetFailback
+Namespace,Folder,Server,SMBShare,PriorityOrder,EnableTargetFailback
 FedYYC,Action Grants,LAB-LOUIE,FedYYC-ActionGrants$,1,TRUE
 FedYYC,Action Grants,LAB-DEWEY,FedYYC-ActionGrants$,2,TRUE
+FedYYC,ActivateYYC,LAB-LOUIE,FedYYC-ActivateYYC$,1,TRUE
+FedYYC,ActivateYYC,LAB-DEWEY,FedYYC-ActivateYYC$,2,TRUE
+FedYYC,Annual General Meeting,LAB-LOUIE,FedYYC-AnnualGeneralMeeting$,1,TRUE
+FedYYC,Annual General Meeting,LAB-DEWEY,FedYYC-AnnualGeneralMeeting$,2,TRUE
+FedYYC,Brand Masters,LAB-LOUIE,FedYYC-BrandMasters$,1,TRUE
+FedYYC,Brand Masters,LAB-DEWEY,FedYYC-BrandMasters$,2,TRUE
+FedYYC,Business Directory,LAB-LOUIE,FedYYC-BusinessDirectory$,1,TRUE
+FedYYC,Business Directory,LAB-DEWEY,FedYYC-BusinessDirectory$,2,TRUE
+FedYYC,Citizens + Students,LAB-LOUIE,FedYYC-CitizensStudents$,1,TRUE
+FedYYC,Citizens + Students,LAB-DEWEY,FedYYC-CitizensStudents$,2,TRUE
+FedYYC,ClimateReadyYYC,LAB-LOUIE,FedYYC-ClimateReadyYYC$,1,TRUE
+FedYYC,ClimateReadyYYC,LAB-DEWEY,FedYYC-ClimateReadyYYC$,2,TRUE
+FedYYC,Communications,LAB-LOUIE,FedYYC-Communications$,1,TRUE
+FedYYC,Communications,LAB-DEWEY,FedYYC-Communications$,2,TRUE
+FedYYC,Consulting,LAB-LOUIE,FedYYC-Consulting$,1,TRUE
+FedYYC,Consulting,LAB-DEWEY,FedYYC-Consulting$,2,TRUE
+FedYYC,Energizing Spaces,LAB-LOUIE,FedYYC-EnergizingSpaces$,1,TRUE
+FedYYC,Energizing Spaces,LAB-DEWEY,FedYYC-EnergizingSpaces$,2,TRUE
+FedYYC,Exploring Communities,LAB-LOUIE,FedYYC-ExploringCommunities$,1,TRUE
+FedYYC,Exploring Communities,LAB-DEWEY,FedYYC-ExploringCommunities$,2,TRUE
+FedYYC,External Committees,LAB-LOUIE,FedYYC-ExternalCommittees$,1,TRUE
+FedYYC,External Committees,LAB-DEWEY,FedYYC-ExternalCommittees$,2,TRUE
+FedYYC,Financial Literacy,LAB-LOUIE,FedYYC-FinancialLiteracy$,1,TRUE
+FedYYC,Financial Literacy,LAB-DEWEY,FedYYC-FinancialLiteracy$,2,TRUE
+FedYYC,Forum,LAB-LOUIE,FedYYC-Forum$,1,TRUE
+FedYYC,Forum,LAB-DEWEY,FedYYC-Forum$,2,TRUE
+FedYYC,Fund Development,LAB-LOUIE,FedYYC-FundDevelopment$,1,TRUE
+FedYYC,Fund Development,LAB-DEWEY,FedYYC-FundDevelopment$,2,TRUE
+FedYYC,Good Places Project,LAB-LOUIE,FedYYC-GoodPlacesProject$,1,TRUE
+FedYYC,Good Places Project,LAB-DEWEY,FedYYC-GoodPlacesProject$,2,TRUE
+FedYYC,Hero Awards,LAB-LOUIE,FedYYC-HeroAwards$,1,TRUE
+FedYYC,Hero Awards,LAB-DEWEY,FedYYC-HeroAwards$,2,TRUE
+FedYYC,IT,LAB-LOUIE,FedYYC-IT$,1,TRUE
+FedYYC,IT,LAB-DEWEY,FedYYC-IT$,2,TRUE
+FedYYC,Internal Committees,LAB-LOUIE,FedYYC-InternalCommittees$,1,TRUE
+FedYYC,Internal Committees,LAB-DEWEY,FedYYC-InternalCommittees$,2,TRUE
+FedYYC,Jane's Walk,LAB-LOUIE,FedYYC-JanesWalk$,1,TRUE
+FedYYC,Jane's Walk,LAB-DEWEY,FedYYC-JanesWalk$,2,TRUE
+FedYYC,Lunch n Learns,LAB-LOUIE,FedYYC-LunchnLearns$,1,TRUE
+FedYYC,Lunch n Learns,LAB-DEWEY,FedYYC-LunchnLearns$,2,TRUE
+FedYYC,March CA Awareness,LAB-LOUIE,FedYYC-MarchCAAwareness$,1,TRUE
+FedYYC,March CA Awareness,LAB-DEWEY,FedYYC-MarchCAAwareness$,2,TRUE
+FedYYC,Member Engagement,LAB-LOUIE,FedYYC-MemberEngagement$,1,TRUE
+FedYYC,Member Engagement,LAB-DEWEY,FedYYC-MemberEngagement$,2,TRUE
+FedYYC,Member Resource Library,LAB-LOUIE,FedYYC-MemberResourceLibrary$,1,TRUE
+FedYYC,Member Resource Library,LAB-DEWEY,FedYYC-MemberResourceLibrary$,2,TRUE
+FedYYC,Membership,LAB-LOUIE,FedYYC-Membership$,1,TRUE
+FedYYC,Membership,LAB-DEWEY,FedYYC-Membership$,2,TRUE
+FedYYC,Milestones,LAB-LOUIE,FedYYC-Milestones$,1,TRUE
+FedYYC,Milestones,LAB-DEWEY,FedYYC-Milestones$,2,TRUE
+FedYYC,Neighbour Day,LAB-LOUIE,FedYYC-NeighbourDay$,1,TRUE
+FedYYC,Neighbour Day,LAB-DEWEY,FedYYC-NeighbourDay$,2,TRUE
+FedYYC,Newsletter,LAB-LOUIE,FedYYC-Newsletter$,1,TRUE
+FedYYC,Newsletter,LAB-DEWEY,FedYYC-Newsletter$,2,TRUE
+FedYYC,One-on-One Support,LAB-LOUIE,FedYYC-OneonOneSupport$,1,TRUE
+FedYYC,One-on-One Support,LAB-DEWEY,FedYYC-OneonOneSupport$,2,TRUE
+FedYYC,Partners In Planning,LAB-LOUIE,FedYYC-PartnersInPlanning$,1,TRUE
+FedYYC,Partners In Planning,LAB-DEWEY,FedYYC-PartnersInPlanning$,2,TRUE
+FedYYC,Social Media,LAB-LOUIE,FedYYC-SocialMedia$,1,TRUE
+FedYYC,Social Media,LAB-DEWEY,FedYYC-SocialMedia$,2,TRUE
+FedYYC,Urban Planning Topics,LAB-LOUIE,FedYYC-UrbanPlanningTopics$,1,TRUE
+FedYYC,Urban Planning Topics,LAB-DEWEY,FedYYC-UrbanPlanningTopics$,2,TRUE
+FedYYC,Website,LAB-LOUIE,FedYYC-Website$,1,TRUE
+FedYYC,Website,LAB-DEWEY,FedYYC-Website$,2,TRUE
+FedYYC,Workshops,LAB-LOUIE,FedYYC-Workshops$,1,TRUE
+FedYYC,Workshops,LAB-DEWEY,FedYYC-Workshops$,2,TRUE
